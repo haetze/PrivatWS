@@ -2,4 +2,4 @@
 #+AUTHOR: Richard Stewing
 #+OPTIONS: toc:nil html-postamble:nil
 #+LANGUAGE: en
-#+HTML_HEAD: <link rel="stylesheet" href="../css/main.css">
+#+HTML_HEAD: <link rel="stylesheet" href="css/main.css">
