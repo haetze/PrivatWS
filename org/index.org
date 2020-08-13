@@ -7,4 +7,3 @@
 #+INCLUDE: ../util/common.org
 
 
-[[../css/main.css]]
