@@ -1,0 +1,9 @@
+#+TITLE: Hier entsteht eine neue Webseite
+#+DATE: 13 Aug 2020
+#+AUTHOR: Richard Stewing
+# #+EMAIL: richard.stewing@udo.edu
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+

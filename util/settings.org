@@ -1,0 +1,5 @@
+#+DATE: 13 Aug 2020
+#+AUTHOR: Richard Stewing
+#+OPTIONS: toc:nil html-postamble:nil
+#+LANGUAGE: en
+#+HTML_HEAD: <link rel="stylesheet" href="../css/main.css">
