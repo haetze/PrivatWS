@@ -6,4 +6,4 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 
-- [[./CV-de-richard-stewing.html][Lebenslauf]], [[./CV-en-richard-stewing.html][Curriculum Vitae]]
+- [[../html/CV-de-richard-stewing.html][Lebenslauf]], [[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
