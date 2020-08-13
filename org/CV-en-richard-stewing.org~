@@ -1,0 +1,105 @@
+#+TITLE: Curriculum Vitae
+#+SUBTITLE: [[./CV-de-richard-stewing.html][Deusche Version]]
+#+SETUPFILE: ../util/settings.org
+
+# Infos
+#+MACRO: birthday 22.04.1997
+#+MACRO: birthplace Dorsten
+#+MACRO: street Barbara
+#+MACRO: streetShrt str.
+#+MACRO: housenumber 108
+#+MACRO: city Dorsten
+#+MACRO: PLZ 46282 
+#+MACRO: tel 
+#+MACRO: email
+#+MACRO: famlStand single
+#+MACRO: schoolCity Dorsten
+#+MACRO: elementSchol Johannes Grundschule
+#+MACRO: elemtScholyrs 2003-2007
+#+MACRO: secSchol St. Ursula Gymnasium 
+#+MACRO: secScholstart 2007
+#+MACRO: secScholend 2015
+#+MACRO: canada 2012
+#+MACRO: canadaWhat Burnaby Mountain Secondary 
+#+MACRO: canadaWhere Burnaby, British Columbia,  Canada
+#+MACRO: abiNote 2.1
+#+MACRO: usa 2015-2016 
+#+MACRO: usaSchool University of Idaho (Campus Moscow, ID)
+#+MACRO: baB 2016 
+#+MACRO: baE 2019
+#+MACRO: maB 2019
+#+MACRO: B B.Sc. Computer Science
+#+MACRO: M M.Sc. Computer Science
+#+MACRO: BN 1.9
+#+MACRO: maE Today
+#+MACRO: uniB TU Dortmund
+#+MACRO: uniM TU Dortmund
+#+MACRO: MN 1.5
+
+# For settings
+#+MACRO: NEWLINE @@latex:\\@@ @@html:<br>@@ @@ascii:|@@
+
+#+BEGIN_cvimg
+#+attr_html: :width 200px :style float:right;
+[[../img/richard-stewing.jpeg]]
+#+END_cvimg
+
+| Personal Information |                                                 |
+|----------------------+-------------------------------------------------|
+| Name                 | {{{author}}}                                    |
+|----------------------+-------------------------------------------------|
+| Date of Birth        | {{{birthday}}} in {{{birthplace}}}              |
+|----------------------+-------------------------------------------------|
+| Location             | {{{street}}}{{{streetShrt}}} {{{housenumber}}}, |
+|                      | {{{PLZ}}} {{{city}}}                            |
+|----------------------+-------------------------------------------------|
+| Tel.                 |                                                 |
+|----------------------+-------------------------------------------------|
+| Marital Status       | {{{famlStand}}}                                 |
+|----------------------+-------------------------------------------------|
+| Email                |                                                 |
+|----------------------+-------------------------------------------------|
+
+{{{NEWLINE}}}
+
+| Curriculum Vitae                      |                                                          |
+|---------------------------------------+----------------------------------------------------------|
+| {{{elemtScholyrs}}}                   | Primary School: {{{elementSchol}}}                       |
+|                                       | in {{{schoolCity}}}                                      |
+|---------------------------------------+----------------------------------------------------------|
+| {{{secScholstart}}}-{{{secScholend}}} | Secondary School: {{{secSchol}}}                         |
+|                                       | in {{{schoolCity}}}                                      |
+|---------------------------------------+----------------------------------------------------------|
+| {{{canada}}}                          | Visting {{{canadaWhat}}} for seven Months                |
+|                                       | in {{{canadaWhere}}}                                     |
+|---------------------------------------+----------------------------------------------------------|
+| {{{secScholend}}}                     | Graduation from {{{secSchol}}} (A Levels, {{{abiNote}}}) |
+|---------------------------------------+----------------------------------------------------------|
+| {{{usa}}}                             | Studied at {{{usaSchool}}}                               |
+|---------------------------------------+----------------------------------------------------------|
+| {{{baB}}}-{{{baE}}}                   | Studied at {{{uniB}}}                                    |
+|---------------------------------------+----------------------------------------------------------|
+| 2017-2019                             | Employed at the {{{uniB}}} as a Teaching Assistant       |
+|---------------------------------------+----------------------------------------------------------|
+| {{{baE}}}                             | Gradutation from {{{uniB}}} ({{{B}}}, {{{BN}}})          |
+|---------------------------------------+----------------------------------------------------------|
+| {{{maB}}}-{{{maE}}}                   | Studied at {{{uniM}}}                                    |
+|---------------------------------------+----------------------------------------------------------|
+| 2020                                  | Won P^5-Projektgruppen-Praxis-Preises 2019               |
+|                                       | from the Department of Computer Science, TU Dortmund     |
+|---------------------------------------+----------------------------------------------------------|
+| 2020                                  | Participant at Senacor Data Lab                          |
+|---------------------------------------+----------------------------------------------------------|
+# | {{{maE}}}                             | Gradutation from {{{uniM}}} ({{{M}}}, {{{Mn}}})          |
+# |---------------------------------------+----------------------------------------------------------|
+
+
+
+{{{NEWLINE}}}
+
+| Additional Qualification |                 |
+|--------------------------+-----------------|
+| Languages:               | German, English |
+| Hobbys:                  | Swimming        |
+|--------------------------+-----------------|
+

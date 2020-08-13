@@ -1,0 +1,105 @@
+#+TITLE: Lebenslauf
+#+SUBTITLE: [[./CV-en-richard-stewing.html][English Version]]
+#+SETUPFILE: ../util/settings.org
+#+LANGUAGE: de
+
+# Infos
+#+MACRO: birthday 22.04.1997
+#+MACRO: birthplace Dorsten
+#+MACRO: street Barbara
+#+MACRO: streetShrt str.
+#+MACRO: housenumber 108
+#+MACRO: city Dorsten
+#+MACRO: PLZ 46282 
+#+MACRO: tel 
+#+MACRO: email 
+#+MACRO: famlStand ledig
+#+MACRO: schoolCity Dorsten
+#+MACRO: elementSchol Johannes Grundschule
+#+MACRO: elemtScholyrs 2003-2007
+#+MACRO: secSchol St. Ursula Gymnasium 
+#+MACRO: secScholstart 2007
+#+MACRO: secScholend 2015
+#+MACRO: canada 2012
+#+MACRO: canadaWhat Siebenmonatiger Highschoolaufenthalt der Burnaby Mountain Secondary 
+#+MACRO: canadaWhere Burnaby, British Columbia,  Kanada
+#+MACRO: abiNote 2.1
+#+MACRO: usa 2015-2016 
+#+MACRO: usaSchool University of Idaho (Campus Moscow, ID)
+#+MACRO: baB 2016 
+#+MACRO: baE 2019
+#+MACRO: maB 2019
+#+MACRO: B B.Sc. Informatik
+#+MACRO: M M.Sc. Informatik
+#+MACRO: BN 1.9
+#+MACRO: maE heute
+#+MACRO: uniB TU Dortmund
+#+MACRO: uniM TU Dortmund
+
+# For costum
+#+MACRO: NEWLINE @@latex:\\@@ @@html:<br>@@ @@ascii:|@@
+
+#+begin_cvimg
+#+attr_html: :width 200px :style float:right;
+[[../img/richard-stewing.jpeg]]
+#+end_cvimg
+
+| Persönliche Daten |                                                 |
+|-------------------+-------------------------------------------------|
+| Name              | {{{author}}}                                    |
+|-------------------+-------------------------------------------------|
+| Geburtstag        | {{{birthday}}} in {{{birthplace}}}              |
+|-------------------+-------------------------------------------------|
+| Anschrift         | {{{street}}}{{{streetShrt}}} {{{housenumber}}}, |
+|                   | {{{PLZ}}} {{{city}}}                            |
+|-------------------+-------------------------------------------------|
+| Tel.              | {{{tel}}}                                       |
+|-------------------+-------------------------------------------------|
+| Familienstand     | {{{famlStand}}}                                 |
+|-------------------+-------------------------------------------------|
+| Email             | {{{email}}}                                     |
+|-------------------+-------------------------------------------------|
+
+{{{NEWLINE}}}
+
+| Lebenslauf                            |                                                   |
+|---------------------------------------+---------------------------------------------------|
+| {{{elemtScholyrs}}}                   | Besuch der {{{elementSchol}}}                     |
+|                                       | in {{{schoolCity}}}                               |
+|---------------------------------------+---------------------------------------------------|
+| {{{secScholstart}}}-{{{secScholend}}} | Besuch des {{{secSchol}}}                         |
+|                                       | in {{{schoolCity}}}                               |
+|---------------------------------------+---------------------------------------------------|
+| {{{canada}}}                          | {{{canadaWhat}}}                                  |
+|                                       | in {{{canadaWhere}}}                              |
+|---------------------------------------+---------------------------------------------------|
+| {{{secScholend}}}                     | Abschluss des {{{secSchol}}} mit dem              |
+|                                       | Erreichen des Abiturs ({{{abiNote}}})             |
+|---------------------------------------+---------------------------------------------------|
+| {{{usa}}}                             | Besuch der {{{usaSchool}}}                        |
+|---------------------------------------+---------------------------------------------------|
+| {{{baB}}}-{{{baE}}}                   | Besuch der {{{uniB}}}                             |
+|---------------------------------------+---------------------------------------------------|
+| 2017-2019                             | Anstellung als studentische Hilfskraft            |
+|                                       | am Lehrstuhl 1 der Fakultät für Informatik        |
+|                                       | der Technischen Universität Dortmund              |
+|---------------------------------------+---------------------------------------------------|
+| {{{baE}}}                             | Abschluss der {{{uniB}}} mit dem                  |
+|                                       | Erreichen eines {{{B}}} ({{{BN}}})                |
+|---------------------------------------+---------------------------------------------------|
+| {{{maB}}}-{{{maE}}}                   | Besuch der {{{uniM}}}                             |
+|                                       | Angestrebter Abschluss: {{{M}}}                   |
+|---------------------------------------+---------------------------------------------------|
+| 2020                                  | Teilnahme am Senacor Data Lab                     |
+|---------------------------------------+---------------------------------------------------|
+| 2020                                  | Gewinn des P^5-Projektgruppen-Praxis-Preises 2019 |
+|                                       | der Fakultät Informatik der TU Dortmund           |
+
+{{{NEWLINE}}}
+
+| Sonstige Qualifikationen |                                     |
+|--------------------------+-------------------------------------|
+| Sprachkenntnisse:        | Englisch fließend, Deutsch fließend |
+| Hobbys:                  | Schwimmen                           |
+|--------------------------+-------------------------------------|
+

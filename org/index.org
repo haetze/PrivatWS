@@ -1,4 +1,4 @@
-#+TITLE: Hier entsteht eine neue Webseite
+#+TITLE: Homepage - Richard Stewing
 #+DATE: 13 Aug 2020
 #+AUTHOR: Richard Stewing
 # #+EMAIL: richard.stewing@udo.edu
@@ -6,4 +6,4 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 
-
+- [[./CV-de-richard-stewing.html][Lebenslauf]], [[./CV-en-richard-stewing.html][Curriculum Vitae]]
