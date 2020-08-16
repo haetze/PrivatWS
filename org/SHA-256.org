@@ -1,0 +1,52 @@
+#+TITLE: SHA-256
+#+SUBTITLE: Verify Your Files Contents 
+#+DATE: 16 Aug 2020
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard.stewing@udo.edu
+#+SETUPFILE: ../util/settings.org
+#+LANGUAGE: en
+
+Check sums summarize a file into a single number.
+The algorithm to calculate this number is designed in way that makes it hard to calculate a file with a given check sum.
+This allows them to be used to verify that the file was not changed during transmission or over time.
+To verify your file, follow the steps below. 
+If you don't enter the check sum into the text field, you have to compare them by hand.
+Files chosen on this site never leave your computer, all calculations happen locally.
+
+#+HTML: 1. Choose File: <input type="file" onchange="Main()"><br>
+#+HTML: 2. (Optional) Paste Expected SHA-256: <input type="text" oninput="Main()"><br>
+#+HTML: <p id="output-hash"></p>
+#+HTML: <p id="output-equal"></p>
+
+#+begin_src inline-js
+const binStringOfFile = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsBinaryString(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+});
+
+async function Main() {
+   const file = document.querySelector('input[type=file]').files[0];
+   const fileString = await binStringOfFile(file);
+   const sha = await digestMessage(fileString);
+   document.getElementById("output-hash").innerHTML = "Calculated SHA-256:" + sha;
+   const inputSHA = document.querySelector('input[type=text]').value;
+   const outputEq = document.getElementById("output-equal");
+   if(inputSHA != "") {
+     if(inputSHA == sha){
+       outputEq.innerHTML = "Both Sums are equal. You can expected that the content of the file was not changed.";
+     } else {
+       outputEq.innerHTML = "Both Sums are different. The content of the file was propably changed.";
+     }
+   }
+}
+
+async function digestMessage(string) {
+  const strUint8 = new TextEncoder().encode(string);                            // encode as (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest('SHA-256', strUint8);           // hash the message
+  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  return hashHex;
+}
+#+end_src
