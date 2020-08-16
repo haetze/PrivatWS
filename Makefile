@@ -22,7 +22,7 @@ clean:
 
 html/%.html : org/%.org util/settings.org util/common.org
 	mkdir -p $(HTML-DIR)
-	emacs $< --batch -f org-html-export-to-html --kill
+	emacs --batch -l src/config.el $< -f org-html-export-to-html --kill
 	mv org/$(@F) $@
 
 website: $(HTML-OBJ)
