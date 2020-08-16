@@ -7,3 +7,4 @@
 #+INCLUDE: ../util/common.org
 
 - [[../html/CV-de-richard-stewing.html][Lebenslauf]], [[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
+- [[../html/SHA-256.html][SHA 256 Calculator]]
