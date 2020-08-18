@@ -11,7 +11,7 @@
 #+MACRO: city Dorsten
 #+MACRO: PLZ 46282 
 #+MACRO: tel 
-#+MACRO: email
+#+MACRO: email [[mailto:richard@dorsten-stewing.de][richard@dorsten-stewing.de]]
 #+MACRO: famlStand single
 #+MACRO: schoolCity Dorsten
 #+MACRO: elementSchol Johannes Grundschule
@@ -57,7 +57,7 @@
 |----------------------+-------------------------------------------------|
 | Marital Status       | {{{famlStand}}}                                 |
 |----------------------+-------------------------------------------------|
-| Email                |                                                 |
+| Email                | {{{email}}}                                     |
 |----------------------+-------------------------------------------------|
 
 {{{NEWLINE}}}

@@ -12,7 +12,7 @@
 #+MACRO: city Dorsten
 #+MACRO: PLZ 46282 
 #+MACRO: tel 
-#+MACRO: email 
+#+MACRO: email [[mailto:richard@dorsten-stewing.de][richard@dorsten-stewing.de]]
 #+MACRO: famlStand ledig
 #+MACRO: schoolCity Dorsten
 #+MACRO: elementSchol Johannes Grundschule
