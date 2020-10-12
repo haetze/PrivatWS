@@ -6,7 +6,7 @@
 #+HTML: <span class="open-button" id="open-button" onclick="openNav()">&#9776;</span>
 #+HTML: <div class="sidenav" id="sidenav">
 #+HTML: <a href="javascript:void(0)" class="close-button" onclick="closeNav()" id="close-button">&times;</a>
-#+HTML: <a href="home.html" style position: fixed; top: 5px; left: 5px;>
+#+HTML: <a href="index.html" style position: fixed; top: 5px; left: 5px;>
 #+HTML: <img src="../img/logo-full-size.png" alt="logo-full-size.png" width="150px" style="position: fixed; top: 5px; left: 5px;">
 #+HTML: </a>
 
