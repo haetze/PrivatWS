@@ -1,6 +1,7 @@
 #+TITLE: Curriculum Vitae
 #+SUBTITLE: [[./CV-de-richard-stewing.html][Deusche Version]]
 #+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
 
 # Infos
 #+MACRO: birthday 22.04.1997

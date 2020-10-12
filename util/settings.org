@@ -1,5 +1,8 @@
-#+DATE: 13 Aug 2020
+#+DATE: 07 Jul 2020
 #+AUTHOR: Richard Stewing
-#+OPTIONS: toc:nil html-postamble:nil
+#+EMAIL: richard.stewing@udo.edu
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil html-style:t
+#+HTML_LINK_HOME: https://stewing-system-solutions.de
+#+RSS_IMAGE_URL: https://stewing-system-solutions.de/img/logo.png
 #+LANGUAGE: en
 #+HTML_HEAD: <link rel="stylesheet" href="../css/main.css">

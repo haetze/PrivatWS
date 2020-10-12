@@ -1,6 +1,7 @@
 #+TITLE: Lebenslauf
 #+SUBTITLE: [[./CV-en-richard-stewing.html][English Version]]
 #+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
 #+LANGUAGE: de
 
 # Infos

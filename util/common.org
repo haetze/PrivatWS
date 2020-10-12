@@ -1,1 +1,66 @@
+# Not used stand alone
+
+* Headline                 :ignore:common:
+
+
+#+HTML: <span class="open-button" id="open-button" onclick="openNav()">&#9776;</span>
+#+HTML: <div class="sidenav" id="sidenav">
+#+HTML: <a href="javascript:void(0)" class="close-button" onclick="closeNav()" id="close-button">&times;</a>
+#+HTML: <a href="home.html" style position: fixed; top: 5px; left: 5px;>
+#+HTML: <img src="../img/logo-full-size.png" alt="logo-full-size.png" width="150px" style="position: fixed; top: 5px; left: 5px;">
+#+HTML: </a>
+
+#+attr_html: :style position: fixed; top: 180px; left: 5px;
+[[../html/index.html][Home]]
+
+#+attr_html: :style position: fixed; top: 210px; left: 5px;
+[[../html/CV-de-richard-stewing.html][Lebenslauf]]
+
+#+attr_html: :style position: fixed; top: 240px; left: 5px;
+[[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
+
+#+attr_html: :style position: fixed; top: 330px; left: 5px;
+[[../html/blog.html][Blog]]
+
+#+attr_html: :style position: fixed; top: 360px; left: 5px;
+[[../html/feed.xml][RSS Feed]]
+
+#+HTML: </div>
+
+
+
+#+attr_html: :style
+#+begin_src inline-js
+function openNav() {
+  document.getElementById("sidenav").style.width = "200px";
+  document.body.style.paddingLeft = "210px";
+
+  document.getElementById("close-button").style.pointerEvents = "all";
+  document.getElementById("sidenav").style.pointerEvents = "all";
+
+  document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("sidenav").style.visibility = "visible";
+  document.getElementById("open-button").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0px";
+  document.body.style.paddingLeft = "10px";
+
+  document.getElementById("sidenav").style.pointerEvents = "none";
+  document.getElementById("close-button").style.pointerEvents = "none";
+
+  document.getElementById("close-button").style.visibility = "hidden";
+  document.getElementById("sidenav").style.visibility = "hidden";
+  document.getElementById("open-button").style.visibility = "visible";
+}
+
+document.body.onscroll = function(e) { 
+  var x = window.matchMedia("(max-width: 450px)")
+  if(0<e.currentTarget.scrollX && x.matches) { 
+    closeNav();
+  } 
+}
+
+#+end_src
 

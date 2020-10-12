@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-08-18 Tue 20:15 -->
+<!-- 2020-10-12 Mon 17:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Curriculum Vitae</title>
@@ -242,11 +242,81 @@ for the JavaScript code in this tag.
 </script>
 </head>
 <body>
-<div id="content">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="https://stewing-system-solutions.de"> HOME </a>
+</div><div id="content">
 <h1 class="title">Curriculum Vitae
 <br />
 <span class="subtitle"><a href="./CV-de-richard-stewing.html">Deusche Version</a></span>
 </h1>
+
+<span class="open-button" id="open-button" onclick="openNav()">&#9776;</span>
+<div class="sidenav" id="sidenav">
+<a href="javascript:void(0)" class="close-button" onclick="closeNav()" id="close-button">&times;</a>
+<a href="home.html" style position: fixed; top: 5px; left: 5px;>
+<img src="../img/logo-full-size.png" alt="logo-full-size.png" width="150px" style="position: fixed; top: 5px; left: 5px;">
+</a>
+
+<p style="position: fixed; top: 180px; left: 5px;">
+<a href="../html/index.html" style="position: fixed; top: 180px; left: 5px;">Home</a>
+</p>
+
+<p style="position: fixed; top: 210px; left: 5px;">
+<a href="../html/CV-de-richard-stewing.html" style="position: fixed; top: 210px; left: 5px;">Lebenslauf</a>
+</p>
+
+<p style="position: fixed; top: 240px; left: 5px;">
+<a href="../html/CV-en-richard-stewing.html" style="position: fixed; top: 240px; left: 5px;">Curriculum Vitae</a>
+</p>
+
+<p style="position: fixed; top: 330px; left: 5px;">
+<a href="../html/blog.html" style="position: fixed; top: 330px; left: 5px;">Blog</a>
+</p>
+
+<p style="position: fixed; top: 360px; left: 5px;">
+<a href="../html/feed.xml" style="position: fixed; top: 360px; left: 5px;">RSS Feed</a>
+</p>
+
+</div>
+
+
+
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("sidenav").style.width = "200px";
+  document.body.style.paddingLeft = "210px";
+
+  document.getElementById("close-button").style.pointerEvents = "all";
+  document.getElementById("sidenav").style.pointerEvents = "all";
+
+  document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("sidenav").style.visibility = "visible";
+  document.getElementById("open-button").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0px";
+  document.body.style.paddingLeft = "10px";
+
+  document.getElementById("sidenav").style.pointerEvents = "none";
+  document.getElementById("close-button").style.pointerEvents = "none";
+
+  document.getElementById("close-button").style.visibility = "hidden";
+  document.getElementById("sidenav").style.visibility = "hidden";
+  document.getElementById("open-button").style.visibility = "visible";
+}
+
+document.body.onscroll = function(e) { 
+  var x = window.matchMedia("(max-width: 450px)")
+  if(0<e.currentTarget.scrollX && x.matches) { 
+    closeNav();
+  } 
+}
+
+</script>
+
 <div class="cvimg">
 
 <div class="figure">
