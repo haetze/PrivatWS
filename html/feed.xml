@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:georss="http://www.georss.org/georss"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:media="http://search.yahoo.com/mrss/"><channel>
+  <title>Richard Stewing - Blog</title>
+  <atom:link href="https://dorsten-stewing.de/blog.xml" rel="self" type="application/rss+xml" />
+  <link>https://dorsten-stewing.de</link>
+  <description><![CDATA[]]></description>
+  <language>en</language>
+  <pubDate>Mon, 12 Oct 2020 19:37:34 +0200</pubDate>
+  <lastBuildDate>Mon, 12 Oct 2020 19:37:34 +0200</lastBuildDate>
+  <generator>Emacs 27.1 Org-mode 9.3.7</generator>
+  <webMaster>richard@dorsten-stewing.de (Richard Stewing)</webMaster>
+  <image>
+    <url>https://dorsten-stewing.de/img/logo-full-size.png</url>
+    <title>Richard Stewing - Blog</title>
+    <link>https://dorsten-stewing.de</link>
+  </image>
+
+
+</channel>
+</rss>

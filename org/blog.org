@@ -3,21 +3,21 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 
-* Loss of Efficiency
-:PROPERTIES:
-:RSS_PERMALINK: html/LossOfEfficiency.html
-:PUBDATE:  <2020-08-29 Sat 22:52>
-:END:
+# * Loss of Efficiency
+# :PROPERTIES:
+# :RSS_PERMALINK: html/LossOfEfficiency.html
+# :PUBDATE:  <2020-08-29 Sat 22:52>
+# :END:
 
 
-The main selling point of graphical interfaces is the ease of use.
-Graphical interfaces, in many cases, trade inefficiency to achieve this ease of use. 
-This trade is fair for most consumer use cases, but as soon as people need to use them in a professional setting, we need a higher efficiency ceiling.
-In this work, I'm going to explain why I think we need to require this higher ceiling, how we missed the last opportunity to get there and how I think we can do better.
-** Published  :ignore:published:
-/Published on {{{property(PUBDATE)}}}./
-#+begin_src emacs-lisp :exports results :results raw
-(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
-#+end_src
+# The main selling point of graphical interfaces is the ease of use.
+# Graphical interfaces, in many cases, trade inefficiency to achieve this ease of use. 
+# This trade is fair for most consumer use cases, but as soon as people need to use them in a professional setting, we need a higher efficiency ceiling.
+# In this work, I'm going to explain why I think we need to require this higher ceiling, how we missed the last opportunity to get there and how I think we can do better.
+# ** Published  :ignore:published:
+# /Published on {{{property(PUBDATE)}}}./
+# #+begin_src emacs-lisp :exports results :results raw
+# (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+# #+end_src
 
 
