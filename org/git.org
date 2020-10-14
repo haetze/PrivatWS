@@ -40,7 +40,7 @@ I'm only going to focus on the essential bits.
 For all a vast majority of people, those will be enough. 
 If you need an in-depth introduction, I recommend ''Pro Git'' by Scott Chacon and Ben Straub (https://git-scm.com/book/en/v2). 
 I'm going to borrow a lot of things from this book. 
-And in case I saying something contradictory to the book, the book is right and I'm wrong.
+And in case I'm saying something contradictory to the book, the book is right and I'm wrong.
  
 This introduction to version control and Git will discuss version control and its works on a conceptual level. 
 In the second part, I will show you how to use Git to accomplish what we discussed before. 
