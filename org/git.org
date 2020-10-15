@@ -485,4 +485,6 @@ git commit -a -m "merge resolved"
 #+RESULTS:
 [[file:../img/git-graph-6.png]]
 
+Sometimes the merge can be done automatically. 
+In that case, Git opens an editor and you can enter a commit message and Git creates the commit accordingly.
 Congratulation! You just learned all the basics of Git.
