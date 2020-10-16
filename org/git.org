@@ -488,3 +488,50 @@ git commit -a -m "merge resolved"
 Sometimes the merge can be done automatically. 
 In that case, Git opens an editor and you can enter a commit message and Git creates the commit accordingly.
 Congratulation! You just learned all the basics of Git.
+
+The last thing, I want to talk about is distribution.
+Git also allows to share the versions between machine.
+We are only going to talk about [[https://github.com][Github]].
+
+Once you signed up to Github, you can use the web interface to create a new repository on the server.
+Github then offers you a step by step instruction to push an existing repository to Github or clone the empty repository from Github.
+''Clone'' is what Git calls the download of an existing repository.
+If you want to clone a repository from Github you use the command:
+
+#+begin_src shell :exports code
+git clone https://github.com/username/reponame
+#+end_src
+
+If you want to share your code, you generally do that using =git push=.
+It is important that the branch you are locally on has a counterpart on the server. 
+You can set this up using =git push -u origin <remote-branch>=.
+This sets the current local branch up to track the =<remote-branch>=. 
+You can then just =git push=. 
+
+Pushing requires that the newest version exists in your local history.
+This requires to pull changes to your local machine that happened while you were making changes.
+You can do this by calling =git pull=.
+This downloads changes and then tries to merge them. 
+If there are conflicts, you have to resolve them just like a local merge, if there aren't any, then it creates a merge commit automatically.
+
+This makes sharing what you are working on very easy. 
+And the best part is, that besides the creation process of the repository, there is nothing special.
+It would work exactly the same way, when using Gitlab etc.
+
+Note that it is generally advised to run =git fetch= and then =git merge= instead of =git pull=. 
+Fetch downloads the changes and Merge tries to apply them. 
+In most cases, =git pull= does the same thing but these two commands allow you to look at the changes before blindly applying them.
+
+When you pull a branch from a server you have no corresponding branch locally, you have to set that up.
+It is generally enough to run =git checkout -b <local-branch> <origin>/<remote-branch>=.
+This creates a local branch that tracks the remote branch and allows you to work of that version.
+
+I think that's it.
+If you know and use these basics regularly, 
+you quickly won't have to think about them but they will help you work more confidently with the high number of versions that are created in a project life cycle.
+Even if you start by only using the =master= branch, you will get comfortable with a powerful tool, that will come in handy with bigger projects.
+I started eight years ago and I was total rubbish in the beginning but I got better and now I use Git for just about everything.
+Even if you never use Git and switch to something else (maybe [[https://en.wikipedia.org/wiki/Mercurial][Mercurial]]?), please stop using these half-baked version control systems. 
+
+ 
+ 

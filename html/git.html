@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-16 Fri 12:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Version Control for the Uninigiated</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Richard Stewing Richard Stewing" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/main.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="https://dorsten-stewing.de"> HOME </a>
+</div><div id="content">
+<h1 class="title">Version Control for the Uninigiated</h1>
+
+<span class="open-button" id="open-button" onclick="openNav()">&#9776;</span>
+<div class="sidenav" id="sidenav">
+<a href="javascript:void(0)" class="close-button" onclick="closeNav()" id="close-button">&times;</a>
+<a href="index.html" style position: fixed; top: 5px; left: 5px;>
+<img src="../img/logo-full-size.png" alt="logo-full-size.png" width="150px" style="position: fixed; top: 5px; left: 5px;">
+</a>
+
+<p style="position: fixed; top: 180px; left: 5px;">
+<a href="../html/index.html" style="position: fixed; top: 180px; left: 5px;">Home</a>
+</p>
+
+<p style="position: fixed; top: 210px; left: 5px;">
+<a href="../html/CV-de-richard-stewing.html" style="position: fixed; top: 210px; left: 5px;">Lebenslauf</a>
+</p>
+
+<p style="position: fixed; top: 240px; left: 5px;">
+<a href="../html/CV-en-richard-stewing.html" style="position: fixed; top: 240px; left: 5px;">Curriculum Vitae</a>
+</p>
+
+<p style="position: fixed; top: 330px; left: 5px;">
+<a href="../html/blog.html" style="position: fixed; top: 330px; left: 5px;">Blog</a>
+</p>
+
+<p style="position: fixed; top: 360px; left: 5px;">
+<a href="../html/feed.xml" style="position: fixed; top: 360px; left: 5px;">RSS Feed</a>
+</p>
+
+</div>
+
+
+
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("sidenav").style.width = "200px";
+  document.body.style.paddingLeft = "210px";
+
+  document.getElementById("close-button").style.pointerEvents = "all";
+  document.getElementById("sidenav").style.pointerEvents = "all";
+
+  document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("sidenav").style.visibility = "visible";
+  document.getElementById("open-button").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0px";
+  document.body.style.paddingLeft = "10px";
+
+  document.getElementById("sidenav").style.pointerEvents = "none";
+  document.getElementById("close-button").style.pointerEvents = "none";
+
+  document.getElementById("close-button").style.visibility = "hidden";
+  document.getElementById("sidenav").style.visibility = "hidden";
+  document.getElementById("open-button").style.visibility = "visible";
+}
+
+document.body.onscroll = function(e) { 
+  var x = window.matchMedia("(max-width: 450px)")
+  if(0<e.currentTarget.scrollX && x.matches) { 
+    closeNav();
+  } 
+}
+
+</script>
+
+<p>
+The Covid19-Pandemic forced all of society to start adopting to digital infrastructure. 
+The Pandemic education sector incredibly hard. 
+This fact (probably) holds for the whole world. 
+German high-schools had to catch up to years of basically not evolving.
+</p>
+
+<p>
+When politicians decided that schools are going all-digital, I was hoping they would spend some time teaching kids some useful skills around the tools they could use to accomplish school tasks.
+One pet-peeve of mine is version control. 
+Most people around me fall into one of two camps.
+</p>
+
+<ol class="org-ol">
+<li>The final-final-final-really-final-report.docx camp</li>
+<li>The version control inside Word etc. is more than enough</li>
+</ol>
+
+<p>
+The second camp, for the most part, ignores versioning. 
+I never saw someone find something in the history provided by Word. 
+But maybe I'm off here. 
+Anyway, I'm of the firm belief that both camps could improve their respective workflows if they adopt proper version control.
+</p>
+
+<p>
+The first camp doesn't lose anything. 
+They just run a commit instead of making the next final copy. 
+The second camp does have to introduce an extra step. 
+Committing once to give your version a ''name'' is probably worth it.
+</p>
+
+<p>
+Even though I use Git as the tool presented here, this is not to say it is the be-all and end-all. 
+There are two reasons for Git in my eyes.
+</p>
+<ol class="org-ol">
+<li>It is currently the standard in the industry</li>
+<li>It is ''libre'' software so that nobody can take it away from me.</li>
+</ol>
+<p>
+If you want to use another tool to accomplish the same things, that is cool with me.
+</p>
+
+<p>
+I should also explain that this a small introduction to version control using Git. 
+I know, Git can be extremely powerful. 
+I'm only going to focus on the essential bits. 
+For all a vast majority of people, those will be enough. 
+If you need an in-depth introduction, I recommend ''Pro Git'' by Scott Chacon and Ben Straub (<a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>). 
+I'm going to borrow a lot of things from this book. 
+And in case I'm saying something contradictory to the book, the book is right and I'm wrong.
+</p>
+
+<p>
+This introduction to version control and Git will discuss version control and its works on a conceptual level. 
+In the second part, I will show you how to use Git to accomplish what we discussed before. 
+The x things we are going to discuss are
+</p>
+<ul class="org-ul">
+<li>How do I start a project in Git?</li>
+<li>How do I save changes?</li>
+<li>How do I revert changes?</li>
+<li>How do I check what changed?</li>
+<li>How do I keep different parallel versions?</li>
+<li>How do I combine to versions?</li>
+<li>How do I send my changes to another machine? (Using Github as an example)</li>
+</ul>
+<p>
+You can accomplish all of these in a plethora of ways. 
+I will focus on the methods I use most often. 
+E.g., I'm only going to talk about a <code>merge</code> and not about <code>rebase</code>. 
+Again, I recommend Pro Git if you want a discussion about those topics.
+</p>
+
+<div id="outline-container-orgb72a13c" class="outline-2">
+<h2 id="orgb72a13c"><span class="section-number-2">1</span> Concepts of Version Control</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In this part, we will look at what we expect from a version control system (VCS). 
+Ideally, most of these points will be self-explanatory, but we will also discuss how Git realizes these requirements.
+</p>
+
+<p>
+First, what do we expect from a VCS? It should manage our versions, that's clear from the name. 
+But what does that mean? 
+</p>
+<ul class="org-ul">
+<li>It should Store older versions.</li>
+<li>Allow switching to older versions.</li>
+<li>Make sure nothing changed in the current (already saved) or older version.</li>
+<li>Allow us to try out different things from older versions without overwriting newer versions.</li>
+<li>It should help us to combine two different versions.</li>
+</ul>
+
+<p>
+The first two points are relatively straightforward. 
+That is what people do who keep copying the files around. 
+The third is less direct. 
+Why would we want to make sure nothing changed in already saved versions? Consider you are writing a report or alike. 
+At some point, you go back to a previous version because you want to start over from that point. 
+So you start to edit your documents. 
+What you just did, destroyed your history. 
+Now the documents that were supposed to store a version at some point in time store an entirely different. 
+You should have made a copy before you edited anything. 
+A VCS would have allowed you to edit the document because a once saved version is set in stone. 
+You can create new versions from it, but you can't destroy an old version.
+</p>
+
+<p>
+Points four and five hint at the same idea. 
+In many cases, you want to try out different things. 
+Trying out different things means you want to go into two directions and store both versions without destroying each other's history. 
+And combining different states is the opposite. 
+You tried something, and now you want to combine the best of both. 
+The VCS needs to support this use case. 
+(The VCS can only help you merge two document states if you use a plain text format. 
+Even if you store your document in XML, merging can be challenging, and combining binary files is impossible for any generic tool. 
+There are specific tools to do this, but I'm not going to discuss those here, because A) I don't use them and B) I believe we should use plain text anyway.)
+</p>
+
+<p>
+I hope it is now clear what to expect from Git. 
+It can do a lot more, but those are the core principles. 
+We are now going to discuss how Git accomplishes the goals outlined above.
+</p>
+
+<p>
+Firstly, what I called a version up to this point is called a commit in Git. 
+A commit is a version that you told Git to save. 
+Once you commit a version to Git, Git will preserve it. 
+Even if the drive corrupts the data, Git will tell you that something happened.
+</p>
+
+<p>
+So what does Git store when you commit a version? 
+It stores 
+</p>
+<ul class="org-ul">
+<li>A compressed version of all files</li>
+<li>A checksum (a number summarizing all data in a commit)</li>
+<li>A reference to previous commit(s)</li>
+</ul>
+<p>
+The compressed version of the files allows Git to restore them when needed. The checksum is so that Git notices changes, specifically to older versions. The previous commit(s) enables Git to go back to an older version. A commit has only one last commit in most cases. It is not correct when you merge two commits to combine them. Git will notice that and will give this commit two previous commits referencing the merged versions. The resulting structure is a bunch of commits that are linked by references to the earlier versions. The following picture illustrates the form.
+<img src="../img/Git-1.jpg" alt="Git-1.jpg" />
+</p>
+
+<p>
+Notice that a commit also stores a commit message as well as the date you created it. 
+The commit message allows you to describe what changed in this version compared to the last, while the date adds meta-information often useful when talking about versions.
+</p>
+
+<p>
+How does Git use this structure to allow you to work with different versions of your project? At this point, I have to differentiate between the commit and the files. 
+When you create a new commit, all files are compressed and moved into your project's Git area. 
+The Git area is the <code>.git</code> folder your project's directory. 
+You never have to enter it. 
+Git fully manages it. 
+So when you commit and then edit any files, the older version stays wholly intact, and nothing is lost.
+</p>
+
+<p>
+Git only keeps a reference to the commit you started from when you began the edit. 
+<img src="../img/Git-2.jpg" alt="Git-2.jpg" />
+</p>
+
+<p>
+When you move this pointer, Git changes the files in your directory, and you can edit them. 
+Conceptually, that's all that Git does. 
+There are some safety features. 
+For example, if you have modified files in the directory, you can not go to an older commit. 
+And if you go back, you have to give this possible divergent history a name. 
+Git calls these divergent histories branches. 
+The standard reference is also a branch that Git calls it <code>master</code>.  
+There is nothing particular about this name. 
+It is just the name of the branch git creates by default. 
+The reference from what commit you are currently working on is, in reality, a reference to a branch. 
+Git calls this reference <code>HEAD</code>. 
+The image from before would look like the following if we also include <code>HEAD</code> and names for branches.
+<img src="../img/Git-3.jpg" alt="Git-3.jpg" />
+</p>
+
+<p>
+But I think we now had enough boring theory.
+We should start looking at how to use Git. 
+We are going to use the command line to run the commands. 
+If you have questions about how to install Git, you can look that up at <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>.
+I'm also going to draw the corresponding structure as I did before. 
+</p>
+</div>
+</div>
+<div id="outline-container-org2aaf5fd" class="outline-2">
+<h2 id="org2aaf5fd"><span class="section-number-2">2</span> Working with Git</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Using Git's basics is straightforward, and not much can go wrong. 
+Before you can start using <code>git</code>, you need start a project.
+A project is simple a directory.
+So creating a project is just:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">mkdir project
+</pre>
+</div>
+
+<p>
+The next step is to tell Git to set everything up to track files in this project.
+Run this command in the project directory.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git init
+</pre>
+</div>
+
+<pre class="example">
+Initialized empty Git repository in ./project/.git/
+</pre>
+
+
+<p>
+This command creates the <code>.git</code> directory and sets it up to start adding files and track changes.
+To track files in the VCS, you have to add them. This is simply done by <code>git add &lt;file&gt;</code>.
+This command <b>does not</b> save it.
+It only tells Git that the next time it creates a commit, this file should be included.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">touch first-file
+git add first-file
+</pre>
+</div>
+
+<p>
+You can then create a commit by running <code>git commit -m &lt;message&gt;</code>.
+This creates a commit with all added files and the message provided by the argument.
+If you want to create a commit and save the changes you have made to any file previously added, you can do this with the <code>git commit -a -m &lt;message&gt;</code> command.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git commit -a -m <span style="font-style: italic;">"initial commit"</span>
+</pre>
+</div>
+
+<p>
+At this point, the graph is still very simple.
+</p>
+
+<div class="figure">
+<p><img src="../img/git-graph-1.png" alt="git-graph-1.png" />
+</p>
+</div>
+
+<p>
+The same information can be viewed with the command <code>git log --graph</code>. 
+This command list all commits leading up to the commit you are currently working on.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git log --graph
+</pre>
+</div>
+
+<pre class="example">
+* commit 5123469586d3ec8b93fdfa2ff84786397f61e8b1 (HEAD -&gt; master)
+  Author: Richard Stewing &lt;richard.stewing@udo.edu&gt;
+  Date:   Tue Oct 13 13:16:50 2020 +0200
+  
+      initial commit
+</pre>
+
+
+
+<p>
+Let's add some data to the file and then we are going to revert to the old commit.
+First we add something to the file.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"hello"</span> &gt; first-file
+cat first-file
+</pre>
+</div>
+
+<pre class="example">
+hello
+</pre>
+
+
+<p>
+Let's look at what Git thinks about this changes. 
+We can use <code>git status</code>.
+This command shows you a few things.
+It shows
+</p>
+<ul class="org-ul">
+<li>files that are modified but not added to the next commit</li>
+<li>files that were added to the next commit</li>
+<li>files that were never added to Git</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">git status
+</pre>
+</div>
+
+<pre class="example">
+On branch master
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+	modified:   first-file
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+
+
+<p>
+This shows us, that the file <code>first-file</code> was modified but not ''staged'' for commit.
+This is Git-speak for files that were not yet added.
+It also tells us you how to revert changes: <code>git restore &lt;file&gt;...</code>.
+Let's revert changes:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git restore first-file
+</pre>
+</div>
+<p>
+Now, the status looks different:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git status
+</pre>
+</div>
+
+<pre class="example">
+On branch master
+nothing to commit, working tree clean
+</pre>
+
+
+<p>
+And now the changes are gone.
+Next we are going to make some different changes and commit them.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"Welcome"</span> &gt; first-file
+git commit -a -m <span style="font-style: italic;">"second commit"</span>
+</pre>
+</div>
+
+<p>
+Using =git log &#x2013;graph we can look at the structure git creates:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git log --graph
+</pre>
+</div>
+
+<pre class="example">
+* commit 26d3660d835870d8a9821ec9815e7cb8b9d8241b (HEAD -&gt; master)
+| Author: Richard Stewing &lt;richard.stewing@udo.edu&gt;
+| Date:   Tue Oct 13 13:55:57 2020 +0200
+| 
+|     second commit
+| 
+* commit 5123469586d3ec8b93fdfa2ff84786397f61e8b1
+  Author: Richard Stewing &lt;richard.stewing@udo.edu&gt;
+  Date:   Tue Oct 13 13:16:50 2020 +0200
+  
+      initial commit
+</pre>
+
+
+
+<div class="figure">
+<p><img src="../img/git-graph-2.png" alt="git-graph-2.png" />
+</p>
+</div>
+
+
+<p>
+This now allows us to jump back to the old version and go off in a different direction.
+Notice that the following (checking something out) can only be done when the <code>working tree</code> is <code>clean</code>.
+Git speak for, no modified files that are tracked by Git exists.
+So if you want to do it, you have to commit the changes or restore the last commit. (There are different things you could do, e.g. stashing, but those a bit more advanced.)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git checkout 5123469 -b branch-2
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="../img/git-graph-3.png" alt="git-graph-3.png" />
+</p>
+</div>
+
+<p>
+We can now edit the file in a different way and commit it.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"Good Day"</span> &gt; first-file
+git commit -a -m <span style="font-style: italic;">"third commit"</span>
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="../img/git-graph-4.png" alt="git-graph-4.png" />
+</p>
+</div>
+
+<p>
+We now have to versions of the file that don't interfere with each other.
+We can switch to the other version on the master branch. (That's what Git calls this parallel versions.)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git checkout master
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="../img/git-graph-5.png" alt="git-graph-5.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">cat first-file
+</pre>
+</div>
+
+<pre class="example">
+Welcome
+</pre>
+
+
+<p>
+And we can merge them by calling <code>git merge branch-2</code>.
+In this case, Git will notify us that we modified the same file in the same place.
+This results in a merge conflict.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git merge branch-2
+</pre>
+</div>
+
+<pre class="example">
+Auto-merging first-file
+CONFLICT (content): Merge conflict in first-file
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+
+
+<p>
+If we now look at <code>first-file</code> we the to versions marked with special symbols.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">cat first-file
+</pre>
+</div>
+
+<pre class="example">
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Welcome
+=======
+Good Day
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-2
+</pre>
+
+
+<p>
+We can now edit the <code>first-file</code> to what ever we like.
+For example we can simple combine both versions by appending them.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">cat first-file
+</pre>
+</div>
+
+<pre class="example">
+Welcome
+Good Day
+</pre>
+
+
+<p>
+And then, we can commit those changes:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git commit -a -m <span style="font-style: italic;">"merge resolved"</span>
+</pre>
+</div>
+
+
+
+
+<div class="figure">
+<p><img src="../img/git-graph-6.png" alt="git-graph-6.png" />
+</p>
+</div>
+
+<p>
+Sometimes the merge can be done automatically. 
+In that case, Git opens an editor and you can enter a commit message and Git creates the commit accordingly.
+Congratulation! You just learned all the basics of Git.
+</p>
+
+<p>
+The last thing, I want to talk about is distribution.
+Git also allows to share the versions between machine.
+We are only going to talk about <a href="https://github.com">Github</a>.
+</p>
+
+<p>
+Once you signed up to Github, you can use the web interface to create a new repository on the server.
+Github then offers you a step by step instruction to push an existing repository to Github or clone the empty repository from Github.
+''Clone'' is what Git calls the download of an existing repository.
+If you want to clone a repository from Github you use the command:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">git clone https://github.com/username/reponame
+</pre>
+</div>
+
+<p>
+If you want to share your code, you generally do that using <code>git push</code>.
+It is important that the branch you are locally on has a counterpart on the server. 
+You can set this up using <code>git push -u origin &lt;remote-branch&gt;</code>.
+This sets the current local branch up to track the <code>&lt;remote-branch&gt;</code>. 
+You can then just <code>git push</code>. 
+</p>
+
+<p>
+Pushing requires that the newest version exists in your local history.
+This requires to pull changes to your local machine that happened while you were making changes.
+You can do this by calling <code>git pull</code>.
+This downloads changes and then tries to merge them. 
+If there are conflicts, you have to resolve them just like a local merge, if there aren't any, then it creates a merge commit automatically.
+</p>
+
+<p>
+This makes sharing what you are working on very easy. 
+And the best part is, that besides the creation process of the repository, there is nothing special.
+It would work exactly the same way, when using Gitlab etc.
+</p>
+
+<p>
+Note that it is generally advised to run <code>git fetch</code> and then <code>git merge</code> instead of <code>git pull</code>. 
+Fetch downloads the changes and Merge tries to apply them. 
+In most cases, <code>git pull</code> does the same thing but these two commands allow you to look at the changes before blindly applying them.
+</p>
+
+<p>
+When you pull a branch from a server you have no corresponding branch locally, you have to set that up.
+It is generally enough to run <code>git checkout -b &lt;local-branch&gt; &lt;origin&gt;/&lt;remote-branch&gt;</code>.
+This creates a local branch that tracks the remote branch and allows you to work of that version.
+</p>
+
+<p>
+I think that's it.
+If you know and use these basics regularly, 
+you quickly won't have to think about them but they will help you work more confidently with the high number of versions that are created in a project life cycle.
+Even if you start by only using the <code>master</code> branch, you will get comfortable with a powerful tool, that will come in handy with bigger projects.
+I started eight years ago and I was total rubbish in the beginning but I got better and now I use Git for just about everything.
+Even if you never use Git and switch to something else (maybe <a href="https://en.wikipedia.org/wiki/Mercurial">Mercurial</a>?), please stop using these half-baked version control systems. 
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

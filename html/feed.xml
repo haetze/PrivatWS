@@ -14,8 +14,8 @@
   <link>https://dorsten-stewing.de</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 12 Oct 2020 19:37:34 +0200</pubDate>
-  <lastBuildDate>Mon, 12 Oct 2020 19:37:34 +0200</lastBuildDate>
+  <pubDate>Fri, 16 Oct 2020 11:35:53 +0200</pubDate>
+  <lastBuildDate>Fri, 16 Oct 2020 11:35:53 +0200</lastBuildDate>
   <generator>Emacs 27.1 Org-mode 9.3.7</generator>
   <webMaster>richard@dorsten-stewing.de (Richard Stewing)</webMaster>
   <image>
@@ -25,5 +25,25 @@
   </image>
 
 
+  <item>
+    <title>Version Control for the Uninigiated</title>
+    <link>https://dorsten-stewing.de/html/git.html</link>
+    <author>richard@dorsten-stewing.de (Richard Stewing)</author>
+    <guid isPermaLink="false">https://dorsten-stewing.de/html/git.html</guid>
+    <pubDate>Fri, 16 Oct 2020 11:40:00 +0200</pubDate>
+
+    <description><![CDATA[<p>
+    The Covid19-Pandemic forced all of society to start adopting to digital infrastructure. 
+    The Pandemic education sector incredibly hard. 
+    This fact (probably) holds for the whole world. 
+    German high-schools had to catch up to years of basically not evolving.
+    </p>
+
+    <p>
+    When politicians decided that schools are going all-digital, I was hoping they would spend some time teaching kids some useful skills around the tools they could use to accomplish school tasks.
+    One pet-peeve of mine is version control. 
+    </p>
+    ]]></description>
+  </item>
 </channel>
 </rss>
