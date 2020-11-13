@@ -10,26 +10,26 @@
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
   <title>Richard Stewing - Blog</title>
-  <atom:link href="https://dorsten-stewing.de/blog.xml" rel="self" type="application/rss+xml" />
-  <link>https://dorsten-stewing.de</link>
+  <atom:link href="https://stewing.dev/blog.xml" rel="self" type="application/rss+xml" />
+  <link>https://stewing.dev</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Fri, 16 Oct 2020 11:35:53 +0200</pubDate>
-  <lastBuildDate>Fri, 16 Oct 2020 11:35:53 +0200</lastBuildDate>
+  <pubDate>Fri, 13 Nov 2020 20:50:50 +0100</pubDate>
+  <lastBuildDate>Fri, 13 Nov 2020 20:50:50 +0100</lastBuildDate>
   <generator>Emacs 27.1 Org-mode 9.3.7</generator>
-  <webMaster>richard@dorsten-stewing.de (Richard Stewing)</webMaster>
+  <webMaster>richard@stewing.dev (Richard Stewing)</webMaster>
   <image>
-    <url>https://dorsten-stewing.de/img/logo-full-size.png</url>
+    <url>https://stewing.dev/img/logo-full-size.png</url>
     <title>Richard Stewing - Blog</title>
-    <link>https://dorsten-stewing.de</link>
+    <link>https://stewing.dev</link>
   </image>
 
 
   <item>
     <title>Version Control for the Uninigiated</title>
-    <link>https://dorsten-stewing.de/html/git.html</link>
-    <author>richard@dorsten-stewing.de (Richard Stewing)</author>
-    <guid isPermaLink="false">https://dorsten-stewing.de/html/git.html</guid>
+    <link>https://stewing.dev/html/git.html</link>
+    <author>richard@stewing.dev (Richard Stewing)</author>
+    <guid isPermaLink="false">https://stewing.dev/html/git.html</guid>
     <pubDate>Fri, 16 Oct 2020 11:40:00 +0200</pubDate>
 
     <description><![CDATA[<p>

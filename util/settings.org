@@ -1,8 +1,8 @@
 #+DATE: 07 Jul 2020
 #+AUTHOR: Richard Stewing
-#+EMAIL: richard@dorsten-stewing.de
+#+EMAIL: richard@stewing.dev
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil html-style:t
-#+HTML_LINK_HOME: https://dorsten-stewing.de
-#+RSS_IMAGE_URL: https://dorsten-stewing.de/img/logo-full-size.png
+#+HTML_LINK_HOME: https://stewing.dev
+#+RSS_IMAGE_URL: https://stewing.dev/img/logo-full-size.png
 #+LANGUAGE: en
 #+HTML_HEAD: <link rel="stylesheet" href="../css/main.css">
