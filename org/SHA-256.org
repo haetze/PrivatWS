@@ -4,6 +4,7 @@
 #+AUTHOR: Richard Stewing
 #+EMAIL: richard.stewing@udo.edu
 #+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
 #+LANGUAGE: en
 
 Check sums summarize a file into a single number.
