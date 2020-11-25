@@ -1,0 +1,20 @@
+#+TITLE: Keys
+#+DATE: 09 Nov 2020
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard@dorsten-stewing.de
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+* richard@stewing.dev
+- Uploaded: 13-11-2020
+  - Fingerprint: 9684 7974 FD03 5565 2E1D EB45 D03E 2E1C 9049 FCD2
+  - [[../keys/richard-at-stewing.dev-pub.gpg][Download]]
+* richard@dorsten-stewing.de
+- Uploaded: 09-11-2020
+  - Fingerprint: 7256 CF77 FEEA 3A21 5F3C 9C93 48EB 502F C7D5 8E4E
+  - [[../keys/richard-at-dorsten-stewing.de-pub.gpg][Download]]
+* richy.sting@gmail.com
+- Uploaded: 09-11-2020
+  - Fingerprint: F921 DCDB FAE9 F577 F975 E4C2 B38D 677D 802D D369
+  - [[../keys/richy.sting-at-gmail.com-pub.gpg][Download]]
