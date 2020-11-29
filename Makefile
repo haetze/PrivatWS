@@ -3,7 +3,7 @@
 ## Author: richard.stewing@udo.edu
 
 HTML-DIR:= html
-REPOSITORY:=https://github.com/haetze/CompanyWebsite
+REPOSITORY:=https://github.com/haetze/PrivatWS
 ORG-DIR:= org
 ORG-SRC:=$(wildcard $(ORG-DIR)/*.org)
 HTML-OBJ:=$(patsubst $(ORG-DIR)/%.org,$(HTML-DIR)/%.html,$(ORG-SRC))
@@ -14,6 +14,7 @@ help:
 	@echo "  clean:      Removes target files."
 	@echo "  website:    Creates HTML Files in html/"
 	@echo "  publish:    Commit with current date and time and push to $(REPOSITORY)"
+	@echo "              and to web server"
 
 
 clean:
