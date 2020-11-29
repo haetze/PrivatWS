@@ -32,10 +32,11 @@
 #+MACRO: B B.Sc. Computer Science
 #+MACRO: M M.Sc. Computer Science
 #+MACRO: BN 1.9
-#+MACRO: maE Today
+#+MACRO: MN 1.4
+#+MACRO: maE 2020
 #+MACRO: uniB TU Dortmund
 #+MACRO: uniM TU Dortmund
-#+MACRO: MN 1.5
+
 
 # For settings
 #+MACRO: NEWLINE @@latex:\\@@ @@html:<br>@@ @@ascii:|@@
@@ -91,8 +92,8 @@
 | 2020                                  | Won P^5-Projektgruppen-Praxis-Preises 2019               |
 |                                       | from the Department of Computer Science, TU Dortmund     |
 |---------------------------------------+----------------------------------------------------------|
-# | {{{maE}}}                             | Gradutation from {{{uniM}}} ({{{M}}}, {{{Mn}}})          |
-# |---------------------------------------+----------------------------------------------------------|
+| {{{maE}}}                             | Gradutation from {{{uniM}}} ({{{M}}}, {{{Mn}}})          |
+|---------------------------------------+----------------------------------------------------------|
 
 
 

@@ -38,7 +38,7 @@ website: $(HTML-OBJ) feed
 
 feed: html/feed.xml
 
-publish:
+publish: website
 	git commit -m "$(shell date)" -a || true
 	git push -u origin master
 	git push -u server master

@@ -33,7 +33,8 @@
 #+MACRO: B B.Sc. Informatik
 #+MACRO: M M.Sc. Informatik
 #+MACRO: BN 1.9
-#+MACRO: maE heute
+#+MACRO: MN 1.4
+#+MACRO: maE 2020
 #+MACRO: uniB TU Dortmund
 #+MACRO: uniM TU Dortmund
 
@@ -89,7 +90,7 @@
 |                                       | Erreichen eines {{{B}}} ({{{BN}}})                |
 |---------------------------------------+---------------------------------------------------|
 | {{{maB}}}-{{{maE}}}                   | Besuch der {{{uniM}}}                             |
-|                                       | Angestrebter Abschluss: {{{M}}}                   |
+|                                       | Erreichen eines {{{M}}} ({{{MN}}})                |
 |---------------------------------------+---------------------------------------------------|
 | 2020                                  | Teilnahme am Senacor Data Lab                     |
 |---------------------------------------+---------------------------------------------------|
