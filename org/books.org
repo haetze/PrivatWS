@@ -6,7 +6,7 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
-
+- Currently Reading: /Black Hat Go/ by Tom Steele, Chris Patten, and Dan Kottmann
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
 ** Programming Languages
