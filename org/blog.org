@@ -5,7 +5,6 @@
 
 * Version Control for the Uninigiated
 :PROPERTIES:
-:PROPERTIES:
 :RSS_PERMALINK: html/git.html
 :PUBDATE:  <2020-10-16 Sat 11:40>
 :END:

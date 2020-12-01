@@ -14,9 +14,6 @@
 [[../html/index.html][Home]]
 
 #+attr_html: :style position: fixed; top: 210px; left: 5px;
-[[../html/CV-de-richard-stewing.html][Lebenslauf]]
-
-#+attr_html: :style position: fixed; top: 240px; left: 5px;
 [[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
 
 #+attr_html: :style position: fixed; top: 330px; left: 5px;
