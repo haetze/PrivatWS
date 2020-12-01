@@ -1,0 +1,53 @@
+#+TITLE: Books
+#+SUBTITLE: Books I enjoyed
+#+DATE: 01 Dec 2020
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard.stewing@udo.edu
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+#+LANGUAGE: en
+
+* Computer Stuff
+- /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
+** Programming Languages
+- /Parallel and Concurrent Programming in Haskell/ by Simon Marlow
+- /Programming in GO/ by Mark Summerfield
+- /Erlang Programming/ by Fransesco Cesarini & Simon Thompson
+- /The Little Schemer/ by Daniel P. Friedman & Matthias Felleisen
+- /The C Programming Language/ by Brian W. Kernighan & Dennis M. Ritchie
+- /Programming Rust/ by Jim Blandy & Jason Orendorff
+- /Building High Integrity Applications with Spark/ by John W. McCormick & Peter C. Chapin
+- /Programming in Ada 2012/ by John Barnes
+- /R for Data Science/ by Hadley Wickham & Garret Grolemund
+- /Practical Common Lisp/ by Peter Seibel
+- /The Rust Programming Language/ by Steve Klabnik, Carol Nichols, and Contributions from the Rust Community
+- /Real World Haskell/ by Bryan O'Sullivan, John Goerzen, and Don Stewart
+- /Type-Driven Development with Idris/ by Edwin Brady
+** (Operating) Systems
+- /Absolute FreeBSD/ by Michael W. Lucas
+- /Understanding the Linux Kernel/ by Daniel P. Bovet & Marco Cesati
+- /Distributed Systems - Principles and Paradigms/ by Andrew S. Tanenbaum & Maarten Van Steen
+- /The Design and Implementation of the FreeBSD Operating System/ by Marshell Kirk McKusick, George V. Neville-Neil, and Robert N. M. Watson
+** Tools
+- /Managing Projects with GNU Make/ by Robert Mecklenburg
+- /Practical Vim/ by Drew Neil
+- /Pro Git/ by Scott Chacon & Ben Straub
+- /The Org Mode 8 Reference Manual/ by Carsten Dominik and others
+- /gnuplot in Action/ by Philipp K. Janert
+- /Learning GNU Emacs/ by Debra Cameron, James Elliott, Marc Loy, Eric Raymond, and Bill Roseblatt
+** Mathematics
+- /Category Theory For Programmers/ by Bartosz Milewski
+- /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
+- /Types and Programming Languages/ by Benjamin C. Pierce
+- /Type Theory and Formal Proof/ by Rob Nederpelt & Herman Geuvers
+- /The Art of Computer Programming - Volume 1/ by Donald E. Knuth
+- /The Art of Computer Programming - Volume 2/ by Donald E. Knuth
+
+* Thriller
+- /Diener der Dunkelheit/ by Donato Carrisi
+- /Der Nebelmann/ by Donato Carrisi
+
+* Pop-Science
+- /Die Mathematik des Daseins/ by Rudolf Taschner
+- /Die Zahl die aus der Kälte kam/ by Rudolf Taschner
+- /what if? Was wäre wenn?/ by Randall Munroe
