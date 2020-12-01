@@ -35,6 +35,7 @@
 - /The Org Mode 8 Reference Manual/ by Carsten Dominik and others
 - /gnuplot in Action/ by Philipp K. Janert
 - /Learning GNU Emacs/ by Debra Cameron, James Elliott, Marc Loy, Eric Raymond, and Bill Roseblatt
+- /sed & awk: UNIX Power Tools (Nutshell Handbooks)/ by Arnold Robbins & Dale Dougherty
 ** Mathematics
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
