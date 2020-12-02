@@ -2,8 +2,9 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# Add tag :removedFromRSS: to remove headline from rss export
 
-* Version Control for the Uninigiated   :removedFromRSS:
+* Version Control for the Uninigiated   
 :PROPERTIES:
 :RSS_PERMALINK: html/git.html
 :PUBDATE:  <2020-10-16 Sat 11:40>
