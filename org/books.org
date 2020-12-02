@@ -6,7 +6,9 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
-- Currently Reading: /Black Hat Go/ by Tom Steele, Chris Patten, and Dan Kottmann
+
+- Currently reading: /Woran Glauben - 10 Angebote für den aufgeklärten Menschen/ by Rudolf Taschner
+
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
 ** Programming Languages
@@ -36,6 +38,32 @@
 - /gnuplot in Action/ by Philipp K. Janert
 - /Learning GNU Emacs/ by Debra Cameron, James Elliott, Marc Loy, Eric Raymond, and Bill Roseblatt
 - /sed & awk: UNIX Power Tools (Nutshell Handbooks)/ by Arnold Robbins & Dale Dougherty
+- /Black Hat Go/ by Tom Steele, Chris Patten, and Dan Kottmann
+  - It's a fun read and a good introduction to Go in a pentesting context. 
+    My only problem with it was, it never actually explains why Go is the best tool for the job. 
+    I may have missed it but as it stands, it seems like a collection of tools implemented in Go.
+    This doesn't have to be a bad thing, I assume it can be really useful as a starting block.
+    It just isn't a general (as in /abstract/) introduction to the topic.
+    There are a few errors in the text.
+    For example, variable names in the Code don't match the ones in the text. 
+    Can't find an example, so maybe I imaged it.
+    Also the Code Listing could have used some more work:
+    - Some Code is oddly formatted. (/eg./ Listing 13 - 5) 
+      The comment that was added for the book is not indented correctly.
+    - Some Code won't compile if copied from the book. (/eg./ Listing 14 - 2)
+      Go won't compile code that uses '\' to extend the line. 
+      At least not in the argument list to a function and probably not anywhere else either.
+      Luckily the code on Github is correct.
+      It is a little annoying because simple removing the '\' makes the code compile.
+      It may not be /idiomatic/ Go but I really appreciate if code example compile if typed out =verbatim=.
+    - The Listing scale horizontally in size with the code. (/eg./ Listing 11 - 5 compared to 5 - 6, picked at random)
+      The same is true for the example shell commands. 
+      It is not a huge deal, but it annoys me every time.
+      Just pick one size and format the code to fit it.
+      I wouldn't even care if you picked the biggest size and it didn't match the margins of the text.
+      It wouldn't look that aesthetically pleasing but at least it's consistent.
+      This way, it's the worst out from both worlds.
+    Non of those are major issues, they just annoyed me.
 ** Mathematics
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
