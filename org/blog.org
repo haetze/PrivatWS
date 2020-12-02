@@ -3,7 +3,7 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 
-* Version Control for the Uninigiated
+* Version Control for the Uninigiated   :removedFromRSS:
 :PROPERTIES:
 :RSS_PERMALINK: html/git.html
 :PUBDATE:  <2020-10-16 Sat 11:40>

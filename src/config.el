@@ -26,7 +26,7 @@
 
 (defun remove-commons (backend)
   (if (eq backend 'rss)
-      (setq org-export-exclude-tags '("common" "published"))))
+      (setq org-export-exclude-tags '("common" "published" "removedFromRSS"))))
 
 (add-hook 'org-export-before-processing-hook 'remove-commons)
 ;;; config.el ends here
