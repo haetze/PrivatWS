@@ -1,5 +1,5 @@
 #+TITLE: Books
-#+SUBTITLE: Books I enjoyed
+#+SUBTITLE: Books I read
 #+DATE: 01 Dec 2020
 #+AUTHOR: Richard Stewing
 #+EMAIL: richard.stewing@udo.edu
@@ -7,7 +7,9 @@
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
 
-- Currently reading: /Woran Glauben - 10 Angebote für den aufgeklärten Menschen/ by Rudolf Taschner
+All list, especially /Boring/ are incomplete.
+
+- Currently reading: /Forge Your Future with Open Source/ by WM (Vicky) Brasseur
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
@@ -80,3 +82,12 @@
 - /Die Mathematik des Daseins/ by Rudolf Taschner
 - /Die Zahl die aus der Kälte kam/ by Rudolf Taschner
 - /what if? Was wäre wenn?/ by Randall Munroe
+* Boring (Since Dec 2020)
+- /Woran Glauben - 10 Angebote für den aufgeklärten Menschen/ by Rudolf Taschner
+  - The title is very misleading. 
+    It talks about these things not in contrast to theism, instead they are painted as things you could also believe.
+    As such, I find it pointless because you can /believe/ in literally anything. 
+    For example, the [[https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster][Flying Spaghetti Monster]].
+    I would have expected that the books explains how the these believes are consistent with what we know as /enlightened/ humans.
+    When a flipped through the book and saw a chapter about God (I was about half-way through.), the last remaining pieces of hope for that went out of the window.
+    I did give up in the chapter about the because I was very bored reading it. 
