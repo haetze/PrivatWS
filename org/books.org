@@ -7,9 +7,9 @@
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
 
-All list, especially /Boring/ are incomplete.
+All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Forge Your Future with Open Source/ by WM (Vicky) Brasseur
+- Currently reading: /Forge Your Future with Open Source/ by VM (Vicky) Brasseur
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
