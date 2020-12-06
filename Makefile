@@ -40,5 +40,5 @@ feed: html/feed.xml
 
 publish: website
 	git commit -m "$(shell date)" -a || true
-	git push -u origin master
-	git push  server master
+	git push origin master
+	git push server master
