@@ -9,7 +9,8 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Forge Your Future with Open Source/ by VM (Vicky) Brasseur
+- Currently reading: /Specifying System - The TLA+ Language and Tools for Hardware and Software Engineers/ by Leslie Lamport
+
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
@@ -66,6 +67,15 @@ All list, especially /Boring/, are incomplete.
       It wouldn't look that aesthetically pleasing but at least it's consistent.
       This way, it's the worst out from both worlds.
     Non of those are major issues, they just annoyed me.
+- /Forge Your Future with Open Source/ by VM (Vicky) Brasseur
+  - Good book. 
+    Everything is explained in simple terms and is enjoyable to read.
+    The complaint I have is that the answer to most questions is ''It depends.'' which even though true doesn't help a reader in that moment.
+    ''It depends.'' is usually balanced with the place where the information can be looked up for a specific project. 
+    So it is not a total loss.
+    To be clear, this is not the authors fault, it's just the state of affairs in FOSS.
+    I would say this is a great book to get an overview of how to work in FOSS or how to approach a FOSS project.
+    My personal favorite sentence: ''You don't inherently deserve to be in the center of the onion, you must earn it.'' (p. 125)
 ** Mathematics
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
