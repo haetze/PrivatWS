@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Specifying System - The TLA+ Language and Tools for Hardware and Software Engineers/ by Leslie Lamport
+- Currently reading: 
 
 
 * Computer Stuff
@@ -83,6 +83,55 @@ All list, especially /Boring/, are incomplete.
 - /Type Theory and Formal Proof/ by Rob Nederpelt & Herman Geuvers
 - /The Art of Computer Programming - Volume 1/ by Donald E. Knuth
 - /The Art of Computer Programming - Volume 2/ by Donald E. Knuth
+- /Specifying System - The TLA+ Language and Tools for Hardware and Software Engineers/ by Leslie Lamport
+  - This book describes the TLA+ Language(See below for a more detailed explanation) and a few tools that analyze it.
+    It consists of four parts:
+    1. Getting Started
+    2. More Advanced Topics
+    3. The Tools
+    4. The TLA+ Language (Only skimmed)
+    The First part introduces how to write basic specifications in TLA+.
+    It introduces an intuitive semantic to explain most operators and should be sufficient for most people.
+    The author and I agree in that respect. (See p. 3)
+    
+    The second part introduces advanced topics. 
+    Among these are /Liveness/, /Fairness/, and /Real-time/  requirements, composition, and more advanced operators.
+    I would have liked to see a more detailed description about composition. 
+    The composition in chapter ten mostly highlights the composition on a logical level. 
+    Using TLA+ on a larger scale requires are clear way to organize a large number of specification. 
+    At the moment, the tools described in this book don't help with this and I would have appreciated advice beyond ''Put all your Modules in one directory''.
+    (The book is not current in terms of tools, consider [[https://lamport.azurewebsites.net/tla/tla.html][The TLA+ Home Page]] for up-to-date information.)
+    
+    The third part introduces the [[https://en.wikipedia.org/wiki/Grammar_checker][syntax checker]], the [[https://en.wikipedia.org/wiki/Typesetting][typesetter]], and the model checker.
+    The most interesting of those is the model checker (TLC).[fn::The other two do exactly what the name suggest.]
+    TLC enumerates possible behaviors [fn::A sequence of states of a system] that satisfy the specification and checks that all invariants that the designer specified hold.
+    TLC has some clear limits, for example, it can't find violations in infinite behaviors.
+    (Technically behaviors are always infinite but that's not important here.)
+    TLC's goal is to find errors in a specification by finding properties that don't hold.
+    In general, it doesn't show freedom from errors because of aforementioned limits.
+    In practice, it increases the confidence in the system modeled by the specification and can help to find the right system.
+
+    The fourth book describes the TLA+ language and semantics in depth. 
+    I didn't read that part because it's more like a reference.
+    
+    TLA+ (or /Temporal Logic of Actions/) describes systems in form of logical expressions.
+    State transitions are described in an /action/ by relating the current state of a variable with the next state. 
+    We can (in principle) describe any system this ways. 
+    (This is true for Pnueli's temporal logic (see p. 2) and I think it still holds for TLA+.)
+    It also allows reasoning about this systems.
+    The problem I often have is that the implemented system and the TLA+ specification live in different worlds.
+    Provided I have a specification of a system and a program that may implement this system, how do I verify if it's the case?
+    The same problem arises when talking about hardware systems.
+    This can't be done in general because it would solve Halting Problem.
+    That doesn't mean it's worthless, it just means that verifying a specification and verifying a program are not both solved with TLA+.
+    TLA+ can be used to describe the system in general and verify that it behaves as expected or wanted.
+    It basically allows to check that you are building the right system before you start implementing it.
+    This can be useful when TLA+ allows you to try things out more quickly than possible with a traditional implementation.
+    It requires the user to use logic which can be hard to pick up for some.
+
+    In conclusion, /Specifying System - The TLA+ Language and Tools for Hardware and Software Engineers/ by Leslie Lamport is a good book for anyone interested in system specification.
+    The logic used for system specification is described thoroughly and intuitive interpretation of most operators are provided. 
+    No prior knowledge about logic or system specification are required. 
 
 * Thriller
 - /Diener der Dunkelheit/ by Donato Carrisi
