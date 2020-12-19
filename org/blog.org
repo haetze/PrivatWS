@@ -25,3 +25,25 @@ One pet-peeve of mine is version control.
 #+end_src
 
 
+
+* Competing with Unicorns
+:PROPERTIES:
+:RSS_PERMALINK: html/competing_with_unicorns.html
+:PUBDATE:  <2020-12-19 Sat 16:30>
+:END:
+I keep a list of books I have read and what I thought about them for future reference later. 
+These thoughts are only for me to remind myself of what I felt while reading it. 
+I forgot so much about the other books I read, and I feel like this should help with that. 
+I usually don't care if there are a bunch of errors in these notes. 
+Therefore they are cheap to create for me. 
+This piece will be a little different. 
+I have so many thoughts about /Competing with Unicorns/ by Jonathan Rasmusson that I felt the need to sort my thoughts more thoroughly. 
+If you want the one-sentence summary: ''Spotify is a great company to work for, and its management style is superior to anything else.''
+I'm not saying the statement is wrong, but it's so unreflected and uncritical. I will get to more details soon, but this is my first impression.
+
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
+

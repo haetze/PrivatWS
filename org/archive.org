@@ -1,0 +1,29 @@
+#+TITLE: Blog Archive
+#+OPTIONS: toc:nil tags:nil 
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+# Add tag :removedFromRSS: to remove headline from rss export
+
+* Version Control for the Uninigiated
+:PROPERTIES:
+:RSS_PERMALINK: html/git.html
+:PUBDATE:  <2020-10-16 Sat 11:40>
+:END:
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
+
+
+* Competing with Unicorns
+:PROPERTIES:
+:RSS_PERMALINK: html/competing_with_unicorns.html
+:PUBDATE:  <2020-12-19 Sat 16:30>
+:END:
+
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src

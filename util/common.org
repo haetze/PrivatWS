@@ -25,6 +25,9 @@
 #+attr_html: :style position: fixed; top: 360px; left: 5px;
 [[../html/feed.xml][RSS Feed]]
 
+#+attr_html: :style position: fixed; bottom: 10px; left: 5px;
+[[../html/archive.html][Archive]]
+
 #+HTML: </div>
 
 

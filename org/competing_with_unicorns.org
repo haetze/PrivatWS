@@ -1,0 +1,188 @@
+#+TITLE: Competing with Unicorns
+#+DATE: 19 Dec 2020
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard@stewing.dev
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+I keep a list of books I have read and what I thought about them for future reference later. 
+These thoughts are only for me to remind myself of what I felt while reading it. 
+I forgot so much about the other books I read, and I feel like this should help with that. 
+I usually don't care if there are a bunch of errors in these notes. 
+Therefore they are cheap to create for me. 
+This piece will be a little different. 
+I have so many thoughts about /Competing with Unicorns/ by Jonathan Rasmusson that I felt the need to sort my thoughts more thoroughly. 
+If you want the one-sentence summary: ''Spotify is a great company to work for, and its management style is superior to anything else.''
+I'm not saying the statement is wrong, but it's so unreflected and uncritical. I will get to more details soon, but this is my first impression.
+
+Specifically, I will touch on the following points (in no particular order):
+- Missing critical distance, only talking about Spotify
+- Validity vs. Correctness
+- How to handle data
+- Conforming to the company culture
+- Formating 
+
+* Missing Critical Distance
+
+I already summarized this point in the introduction. 
+The book explains how Spotify works and organizes itself. 
+The generalization to all Unicorns (or tech companies, Rasmusson uses them interchangeably p. xii) seems a bit eager. 
+In principle, I don't have a problem with it, but this makes the whole thing more of a case study. 
+I would bet there are as many differences between the tech companies he explicitly mentioned (Google, Apple, Amazon, Facebook, and Spotify) as there are similarities. 
+How do we know that these identified similarities are where the competitive advantage lies? 
+We don't, especially if the first-hand experience seems to rely on a single company from the list. 
+
+Having only one data point exaggerates the impression that Spotify's style is superior to all other management types. 
+Even if all other tech companies manage the same way and this is a competitive advantage, I really can't trust this advice.
+
+It also does not help that there are no counterpoints raised in the whole book. 
+(At least I didn't see any. If there are any, I would like to know.) I won't count things like ''Some people don't like to work like this.''-like statements as counterpoints. 
+That's an entirely pointless statement because 
+
+1. I can say this about any way of work.
+2. ''Some'' is so unquantified that it doesn't help a discussion anyway.
+The same is true for the reverse statement, by the way. 
+If you say that most people enjoy working a certain way, I want to know:
+1. How do we know that?
+2. Why is that?
+
+I don't want your opinions. 
+I want tangible evidence. 
+Given that these companies ''Learn with Data'' (p. 81), I expect to get some. 
+
+To get back to the lack of counterpoints. 
+There are two explanations for their absence. 
+Firstly, there might legitimately be none. 
+I seriously doubt that. 
+For example, do we know how this management style behaves in crisis? He doesn't mention that. 
+We understand that authoritarian leadership outperforms transformative leadership in harsh economic conditions. (https://doi.org/10.5465/amd.2014.0132) 
+I hypothesis that the direction displayed by tech companies is closer to a transformative style than to an authoritarian. 
+So the question becomes, how do they respond to similar conditions. 
+My gut feeling is that they behave even worse. 
+This counterpoint I thought of on the spot. 
+And to be clear, I might be wrong, and they outperform any other form of management. 
+We don't have any data in either direction.
+
+On the other hand, this would explain why older companies have a more traditional structure. 
+They have been in enough crises that have a form to accommodate this. 
+The only company on Rasmusson's list that was in trouble is Apple. 
+But did Apple behave like a unicorn described in this book then? 
+Given that Steve Jobs needed to come back and that he was not a consensus kind of guy, I would guess no. 
+
+I'm not trying to convince you that there are drawbacks. 
+I do think there are because I haven't seen a perfect thing in my life. 
+Additionally, I don't see evidence that there aren't any in organizations structured like Spotify. 
+But I still don't know. I'm just saying it seems strange that he doesn't mention any.
+
+* Validity vs. Correctness
+This book also mentions the significant advantage that is the ability to iterate over a product quickly. (p. 8) 
+I agree with the point. 
+I want to say that just because you iterate over a product doesn't mean it is okay to ship an incorrect one. 
+
+/Validity/ means shipping the right product, so the product customers want. 
+/Correctness/ means it's working correctly. 
+Most companies sacrifice correctness while testing for validity, and this is not an excuse. 
+I like working products. 
+And don't want a service/game/program that gets patched with an update because they are still searching for a better market fit.
+
+There are also limits to what I want companies to test out in public validity tests. 
+If you need product testers, then hire some. 
+At least declare the thing a beta (or even alpha). 
+Don't ship something as done when it is not. 
+These are not complaints about the book perse. 
+But I still wanted to mention them. 
+
+Also, I know this is a little out of place, but on page 80, he writes, ''They[Tech companies] don't cut corners on tech - they treat their infrastructure as a first-class citizen.''. 
+Really? 
+Do they? 
+Every bug where something didn't work because they didn't have a test for it, was what? 
+Someone thought they didn't need the test and cut a corner. 
+What is the behemoth of the Google Suit Applications (Docs, Spreadsheet, Gmail, Drive)? 
+Are you telling me it has to be this slow because they didn't cut corners when implementing it? 
+I think I remember to have read that the whole thing was one enormous application, which is part of the reason it runs so slowly. 
+I don't know where so this might be wrong. 
+But saying they don't cut corners is insane. 
+Engineering is an exercise in corner-cutting. 
+We only call them trade-offs, but essentially there is no real difference. 
+
+* How to Handle Data
+
+An adjacent topic is how these companies handle data. 
+Rasmusson explains that these unicorns collect a lot of data to develop the perfect product. 
+I believe this is true. 
+But yet again, it was utterly unreflective. 
+Maybe it is not a morally right thing to collect all this information about people. 
+I know it gives you significant advantages when you collect all this data. 
+I honestly didn't expect him to mention that you should still value and enable privacy wherever possible because it is your moral responsibility. 
+There is also the real responsibility that comes with handling other people's data. 
+There should have been a mention that you should protect the data against misuse. 
+We have had enough scandals where user data leaked that this should have been at least a footnote. 
+
+* Conforming to Company Culture
+
+Chapter nine, ''Reinforce Through Culture'' (p. 89), Rasmusson describes how different companies value different cultures, and that tech companies reinforce behavior through their culture. 
+I want to remark that all these lists of qualities people value in their employees always has asterisk'.
+For example, Amazon(you can find the list at www.amazon.jobs/en/principles). 
+One item on the list is ''Insist on the Highest Standards''. 
+This statement would imply that everyone working for Amazon insists on the highest standards. 
+Not true. 
+Management decided that it is enough to have contractors deliver their packages because it allows them to save money for various reasons. 
+One of which is they don't have to pay the delivery men as much. 
+They spy on their employees in Amazon's package centers. 
+What highest moral standard is that? What they mean is ''insist on highest product quality''. 
+We can debate this because they allow people to sell a lot of garbage on their platform. 
+But at least it is closer because they don't care about humans working there. 
+They care about the product. 
+What I'm getting at is that these we need to interpret these lists correctly.  
+
+They are companies that try to create value, first and foremost. 
+For the longest time, Google had a motto not to be evil (''Don't be evil''). 
+They still did some things (like collecting all the data) that were at least questionable. 
+These things always have to benefit the company, and they will interpret these things loosely when they need to.
+
+* Formating
+While the last points were more book adjacent, this is really about the book. 
+These range from nitpicks to things that I would not have accepted for print. 
+For all of you have to keep in mind that this book is short. 
+It's 114 pages. 
+You can easily read it in a day. 
+And somethings you get away with in long books become irritating. 
+For example, my general stand on repetition is that it is good. 
+It allows the reader to follow the discussion more easily. 
+It gets problematic when you repeat yourself almost verbatim.
+ He talks about Data Scientists twice, once on page 30 and once on page 86. 
+Both sections have the same length, the exact contents, and sometimes the same sentences. 
+They are both a page, and I often skip through the book before I start reading, and when I read page 86, I was first confused because I thought I might have read it when cutting through. 
+Well, I didn't is was just repetitive. 
+I could excuse this if it were a challenging topic where you need to repeat ourselves more oft not to lose the reader. 
+But everything discussed in this book is straight forward, and the two sections are 50 pages apart. 
+That's half the book, but still very close. 
+If something is just a repetition of something said shortly before, leave it out. 
+
+On the topic of repetition, the book has a lot of pictures. 
+And they also repeat many times. 
+They could have just put less of them in there and reference them. 
+I can turn a page back if I want to look at them again.
+
+I think you could condense the whole thing down to maybe 40 pages without losing anything. 
+There are a few places where you can write something down. 
+We would need to leave them out or collect them in the book's back.
+
+The book would also appreciate some more formatting. 
+A sentence is not a paragraph, and it doesn't look good on a page, especially if it is just one line. (p. 54) 
+Sentences introducing an enumeration should be on the same page as the enumeration. (p. 75) 
+If you refer to a video, provide a link, don't tell me to ''Check them out by Googling >>Spotify Engineering Culture<<'' (p. 24). 
+Later, he provided links. 
+Why he didn't here is beyond me. 
+Also, there is more than one kind of bullet list (p. 92 and 93). 
+I haven't figured out if there was a reason. 
+I just noticed, and it irritated me.
+
+* Conclusion
+I have criticized this book a lot. 
+It is not that bad. 
+It is easy to read, and if all you are looking for is anecdotal evidence that Unicorns have a superior management style, this is the book for you. 
+If you are looking for a more balanced comparison, this is not it. 
+There are also some errors I haven't mentioned: typos and alike. 
+I don't regret having read this book, but I doubt it will become a classic for management to read.

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-19 Sat 16:02 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Competing with Unicorns</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Richard Stewing Richard Stewing" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../css/main.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="https://stewing.dev"> HOME </a>
+</div><div id="content">
+<h1 class="title">Competing with Unicorns</h1>
+
+<span class="open-button" id="open-button" onclick="openNav()">&#9776;</span>
+<div class="sidenav" id="sidenav">
+<a href="javascript:void(0)" class="close-button" onclick="closeNav()" id="close-button">&times;</a>
+<a href="index.html" style position: fixed; top: 5px; left: 5px;>
+<img src="../img/logo-full-size.png" alt="logo-full-size.png" width="150px" style="position: fixed; top: 5px; left: 5px;">
+</a>
+
+<p style="position: fixed; top: 180px; left: 5px;">
+<a href="../html/index.html" style="position: fixed; top: 180px; left: 5px;">Home</a>
+</p>
+
+<p style="position: fixed; top: 210px; left: 5px;">
+<a href="../html/CV-en-richard-stewing.html" style="position: fixed; top: 210px; left: 5px;">Curriculum Vitae</a>
+</p>
+
+<p style="position: fixed; top: 240px; left: 5px;">
+<a href="https://github.com/haetze/" style="position: fixed; top: 240px; left: 5px;">GitHub</a>
+</p>
+
+<p style="position: fixed; top: 330px; left: 5px;">
+<a href="../html/blog.html" style="position: fixed; top: 330px; left: 5px;">Blog</a>
+</p>
+
+<p style="position: fixed; top: 360px; left: 5px;">
+<a href="../html/feed.xml" style="position: fixed; top: 360px; left: 5px;">RSS Feed</a>
+</p>
+
+<p style="position: fixed; bottom: 10px; left: 5px;">
+<a href="../html/archive.html" style="position: fixed; bottom: 10px; left: 5px;">Archive</a>
+</p>
+
+</div>
+
+
+
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("sidenav").style.width = "200px";
+  document.body.style.paddingLeft = "210px";
+
+  document.getElementById("close-button").style.pointerEvents = "all";
+  document.getElementById("sidenav").style.pointerEvents = "all";
+
+  document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("sidenav").style.visibility = "visible";
+  document.getElementById("open-button").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0px";
+  document.body.style.paddingLeft = "10px";
+
+  document.getElementById("sidenav").style.pointerEvents = "none";
+  document.getElementById("close-button").style.pointerEvents = "none";
+
+  document.getElementById("close-button").style.visibility = "hidden";
+  document.getElementById("sidenav").style.visibility = "hidden";
+  document.getElementById("open-button").style.visibility = "visible";
+}
+
+document.body.onscroll = function(e) { 
+  var x = window.matchMedia("(max-width: 450px)")
+  if(0<e.currentTarget.scrollX && x.matches) { 
+    closeNav();
+  } 
+}
+
+</script>
+
+<p>
+I keep a list of books I have read and what I thought about them for future reference later. 
+These thoughts are only for me to remind myself of what I felt while reading it. 
+I forgot so much about the other books I read, and I feel like this should help with that. 
+I usually don't care if there are a bunch of errors in these notes. 
+Therefore they are cheap to create for me. 
+This piece will be a little different. 
+I have so many thoughts about <i>Competing with Unicorns</i> by Jonathan Rasmusson that I felt the need to sort my thoughts more thoroughly. 
+If you want the one-sentence summary: ''Spotify is a great company to work for, and its management style is superior to anything else.''
+I'm not saying the statement is wrong, but it's so unreflected and uncritical. I will get to more details soon, but this is my first impression.
+</p>
+
+<p>
+Specifically, I will touch on the following points (in no particular order):
+</p>
+<ul class="org-ul">
+<li>Missing critical distance, only talking about Spotify</li>
+<li>Validity vs. Correctness</li>
+<li>How to handle data</li>
+<li>Conforming to the company culture</li>
+<li>Formating</li>
+</ul>
+
+<div id="outline-container-org310e5bf" class="outline-2">
+<h2 id="org310e5bf"><span class="section-number-2">1</span> Missing Critical Distance</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I already summarized this point in the introduction. 
+The book explains how Spotify works and organizes itself. 
+The generalization to all Unicorns (or tech companies, Rasmusson uses them interchangeably p. xii) seems a bit eager. 
+In principle, I don't have a problem with it, but this makes the whole thing more of a case study. 
+I would bet there are as many differences between the tech companies he explicitly mentioned (Google, Apple, Amazon, Facebook, and Spotify) as there are similarities. 
+How do we know that these identified similarities are where the competitive advantage lies? 
+We don't, especially if the first-hand experience seems to rely on a single company from the list. 
+</p>
+
+<p>
+Having only one data point exaggerates the impression that Spotify's style is superior to all other management types. 
+Even if all other tech companies manage the same way and this is a competitive advantage, I really can't trust this advice.
+</p>
+
+<p>
+It also does not help that there are no counterpoints raised in the whole book. 
+(At least I didn't see any. If there are any, I would like to know.) I won't count things like ''Some people don't like to work like this.''-like statements as counterpoints. 
+That's an entirely pointless statement because 
+</p>
+
+<ol class="org-ol">
+<li>I can say this about any way of work.</li>
+<li>''Some'' is so unquantified that it doesn't help a discussion anyway.</li>
+</ol>
+<p>
+The same is true for the reverse statement, by the way. 
+If you say that most people enjoy working a certain way, I want to know:
+</p>
+<ol class="org-ol">
+<li>How do we know that?</li>
+<li>Why is that?</li>
+</ol>
+
+<p>
+I don't want your opinions. 
+I want tangible evidence. 
+Given that these companies ''Learn with Data'' (p. 81), I expect to get some. 
+</p>
+
+<p>
+To get back to the lack of counterpoints. 
+There are two explanations for their absence. 
+Firstly, there might legitimately be none. 
+I seriously doubt that. 
+For example, do we know how this management style behaves in crisis? He doesn't mention that. 
+We understand that authoritarian leadership outperforms transformative leadership in harsh economic conditions. (<a href="https://doi.org/10.5465/amd.2014.0132">https://doi.org/10.5465/amd.2014.0132</a>) 
+I hypothesis that the direction displayed by tech companies is closer to a transformative style than to an authoritarian. 
+So the question becomes, how do they respond to similar conditions. 
+My gut feeling is that they behave even worse. 
+This counterpoint I thought of on the spot. 
+And to be clear, I might be wrong, and they outperform any other form of management. 
+We don't have any data in either direction.
+</p>
+
+<p>
+On the other hand, this would explain why older companies have a more traditional structure. 
+They have been in enough crises that have a form to accommodate this. 
+The only company on Rasmusson's list that was in trouble is Apple. 
+But did Apple behave like a unicorn described in this book then? 
+Given that Steve Jobs needed to come back and that he was not a consensus kind of guy, I would guess no. 
+</p>
+
+<p>
+I'm not trying to convince you that there are drawbacks. 
+I do think there are because I haven't seen a perfect thing in my life. 
+Additionally, I don't see evidence that there aren't any in organizations structured like Spotify. 
+But I still don't know. I'm just saying it seems strange that he doesn't mention any.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4e39a5" class="outline-2">
+<h2 id="orgb4e39a5"><span class="section-number-2">2</span> Validity vs. Correctness</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This book also mentions the significant advantage that is the ability to iterate over a product quickly. (p. 8) 
+I agree with the point. 
+I want to say that just because you iterate over a product doesn't mean it is okay to ship an incorrect one. 
+</p>
+
+<p>
+<i>Validity</i> means shipping the right product, so the product customers want. 
+<i>Correctness</i> means it's working correctly. 
+Most companies sacrifice correctness while testing for validity, and this is not an excuse. 
+I like working products. 
+And don't want a service/game/program that gets patched with an update because they are still searching for a better market fit.
+</p>
+
+<p>
+There are also limits to what I want companies to test out in public validity tests. 
+If you need product testers, then hire some. 
+At least declare the thing a beta (or even alpha). 
+Don't ship something as done when it is not. 
+These are not complaints about the book perse. 
+But I still wanted to mention them. 
+</p>
+
+<p>
+Also, I know this is a little out of place, but on page 80, he writes, ''They[Tech companies] don't cut corners on tech - they treat their infrastructure as a first-class citizen.''. 
+Really? 
+Do they? 
+Every bug where something didn't work because they didn't have a test for it, was what? 
+Someone thought they didn't need the test and cut a corner. 
+What is the behemoth of the Google Suit Applications (Docs, Spreadsheet, Gmail, Drive)? 
+Are you telling me it has to be this slow because they didn't cut corners when implementing it? 
+I think I remember to have read that the whole thing was one enormous application, which is part of the reason it runs so slowly. 
+I don't know where so this might be wrong. 
+But saying they don't cut corners is insane. 
+Engineering is an exercise in corner-cutting. 
+We only call them trade-offs, but essentially there is no real difference. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab5732f" class="outline-2">
+<h2 id="orgab5732f"><span class="section-number-2">3</span> How to Handle Data</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+An adjacent topic is how these companies handle data. 
+Rasmusson explains that these unicorns collect a lot of data to develop the perfect product. 
+I believe this is true. 
+But yet again, it was utterly unreflective. 
+Maybe it is not a morally right thing to collect all this information about people. 
+I know it gives you significant advantages when you collect all this data. 
+I honestly didn't expect him to mention that you should still value and enable privacy wherever possible because it is your moral responsibility. 
+There is also the real responsibility that comes with handling other people's data. 
+There should have been a mention that you should protect the data against misuse. 
+We have had enough scandals where user data leaked that this should have been at least a footnote. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb344e40" class="outline-2">
+<h2 id="orgb344e40"><span class="section-number-2">4</span> Conforming to Company Culture</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Chapter nine, ''Reinforce Through Culture'' (p. 89), Rasmusson describes how different companies value different cultures, and that tech companies reinforce behavior through their culture. 
+I want to remark that all these lists of qualities people value in their employees always has asterisk'.
+For example, Amazon(you can find the list at www.amazon.jobs/en/principles). 
+One item on the list is ''Insist on the Highest Standards''. 
+This statement would imply that everyone working for Amazon insists on the highest standards. 
+Not true. 
+Management decided that it is enough to have contractors deliver their packages because it allows them to save money for various reasons. 
+One of which is they don't have to pay the delivery men as much. 
+They spy on their employees in Amazon's package centers. 
+What highest moral standard is that? What they mean is ''insist on highest product quality''. 
+We can debate this because they allow people to sell a lot of garbage on their platform. 
+But at least it is closer because they don't care about humans working there. 
+They care about the product. 
+What I'm getting at is that these we need to interpret these lists correctly.  
+</p>
+
+<p>
+They are companies that try to create value, first and foremost. 
+For the longest time, Google had a motto not to be evil (''Don't be evil''). 
+They still did some things (like collecting all the data) that were at least questionable. 
+These things always have to benefit the company, and they will interpret these things loosely when they need to.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17f5efe" class="outline-2">
+<h2 id="org17f5efe"><span class="section-number-2">5</span> Formating</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+While the last points were more book adjacent, this is really about the book. 
+These range from nitpicks to things that I would not have accepted for print. 
+For all of you have to keep in mind that this book is short. 
+It's 114 pages. 
+You can easily read it in a day. 
+And somethings you get away with in long books become irritating. 
+For example, my general stand on repetition is that it is good. 
+It allows the reader to follow the discussion more easily. 
+It gets problematic when you repeat yourself almost verbatim.
+ He talks about Data Scientists twice, once on page 30 and once on page 86. 
+Both sections have the same length, the exact contents, and sometimes the same sentences. 
+They are both a page, and I often skip through the book before I start reading, and when I read page 86, I was first confused because I thought I might have read it when cutting through. 
+Well, I didn't is was just repetitive. 
+I could excuse this if it were a challenging topic where you need to repeat ourselves more oft not to lose the reader. 
+But everything discussed in this book is straight forward, and the two sections are 50 pages apart. 
+That's half the book, but still very close. 
+If something is just a repetition of something said shortly before, leave it out. 
+</p>
+
+<p>
+On the topic of repetition, the book has a lot of pictures. 
+And they also repeat many times. 
+They could have just put less of them in there and reference them. 
+I can turn a page back if I want to look at them again.
+</p>
+
+<p>
+I think you could condense the whole thing down to maybe 40 pages without losing anything. 
+There are a few places where you can write something down. 
+We would need to leave them out or collect them in the book's back.
+</p>
+
+<p>
+The book would also appreciate some more formatting. 
+A sentence is not a paragraph, and it doesn't look good on a page, especially if it is just one line. (p. 54) 
+Sentences introducing an enumeration should be on the same page as the enumeration. (p. 75) 
+If you refer to a video, provide a link, don't tell me to ''Check them out by Googling &gt;&gt;Spotify Engineering Culture&lt;&lt;'' (p. 24). 
+Later, he provided links. 
+Why he didn't here is beyond me. 
+Also, there is more than one kind of bullet list (p. 92 and 93). 
+I haven't figured out if there was a reason. 
+I just noticed, and it irritated me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40c68a3" class="outline-2">
+<h2 id="org40c68a3"><span class="section-number-2">6</span> Conclusion</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+I have criticized this book a lot. 
+It is not that bad. 
+It is easy to read, and if all you are looking for is anecdotal evidence that Unicorns have a superior management style, this is the book for you. 
+If you are looking for a more balanced comparison, this is not it. 
+There are also some errors I haven't mentioned: typos and alike. 
+I don't regret having read this book, but I doubt it will become a classic for management to read.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

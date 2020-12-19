@@ -1,7 +1,7 @@
 #+TITLE: Version Control for the Uninigiated
 #+DATE: 13 Oct 2020
 #+AUTHOR: Richard Stewing
-#+EMAIL: richard@dorsten-stewing.de
+#+EMAIL: richard@stewing.dev
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
