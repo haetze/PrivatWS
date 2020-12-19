@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Competing with Unicorns: How the World's Best Companies Ship Software and Work Differently/ by Jonathan Rasmusson
+- Currently reading: /Der Aufstieg der Quandts: Eine Deutsche Unternehmerdynastie/ by Joachim Scholtyseck
 
 
 * Computer Stuff
@@ -150,3 +150,4 @@ All list, especially /Boring/, are incomplete.
     I would have expected that the books explains how the these believes are consistent with what we know as /enlightened/ humans.
     When a flipped through the book and saw a chapter about God (I was about half-way through.), the last remaining pieces of hope for that went out of the window.
     I did give up in the chapter about the because I was very bored reading it. 
+- /Competing with Unicorns: How the World's Best Companies Ship Software and Work Differently/ by Jonathan Rasmusson [[../html/competing_with_unicorns.html][Thoughts about this book]]

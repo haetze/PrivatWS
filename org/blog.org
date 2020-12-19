@@ -29,7 +29,7 @@ One pet-peeve of mine is version control.
 * Competing with Unicorns
 :PROPERTIES:
 :RSS_PERMALINK: html/competing_with_unicorns.html
-:PUBDATE:  <2020-12-19 Sat 16:30>
+:PUBDATE:  <2020-12-19 Sat 16:10>
 :END:
 I keep a list of books I have read and what I thought about them for future reference later. 
 These thoughts are only for me to remind myself of what I felt while reading it. 
