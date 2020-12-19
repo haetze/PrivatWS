@@ -123,7 +123,7 @@ We have had enough scandals where user data leaked that this should have been at
 
 Chapter nine, ''Reinforce Through Culture'' (p. 89), Rasmusson describes how different companies value different cultures, and that tech companies reinforce behavior through their culture. 
 I want to remark that all these lists of qualities people value in their employees always has asterisk'.
-For example, Amazon(you can find the list at www.amazon.jobs/en/principles). 
+For example, Amazon(you can find the list at [[http://www.amazon.jobs/en/principles][www.amazon.jobs]]). 
 One item on the list is ''Insist on the Highest Standards''. 
 This statement would imply that everyone working for Amazon insists on the highest standards. 
 Not true. 
