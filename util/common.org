@@ -25,8 +25,11 @@
 #+attr_html: :style position: fixed; top: 360px; left: 5px;
 [[../html/feed.xml][RSS Feed]]
 
-#+attr_html: :style position: fixed; bottom: 10px; left: 5px;
+#+attr_html: :style position: fixed; bottom: 20px; left: 5px;
 [[../html/archive.html][Archive]]
+
+#+attr_html: :style position: fixed; bottom: 5px; left: 5px;
+[[../html/impressum.html][Impressum]]
 
 #+HTML: </div>
 
