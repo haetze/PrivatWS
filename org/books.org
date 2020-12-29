@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Der Aufstieg der Quandts: Eine Deutsche Unternehmerdynastie/ by Joachim Scholtyseck
+- Currently reading: /Purely Functional Data Structures/ by Chris Okasaki
 
 
 * Computer Stuff
@@ -141,6 +141,18 @@ All list, especially /Boring/, are incomplete.
 - /Die Mathematik des Daseins/ by Rudolf Taschner
 - /Die Zahl die aus der Kälte kam/ by Rudolf Taschner
 - /what if? Was wäre wenn?/ by Randall Munroe
+- /Der Aufstieg der Quandts: Eine Deutsche Unternehmerdynastie/ by Joachim Scholtyseck
+  - Very detailed description about the Quandt-Family. 
+    It describes the history of the family starting with Emil Quandt in the late 1800s until Günther Quandt during the third reich.
+    Günther Quandt's sons are described to a lesser degree. 
+    The focus is on the businesses Günther Quandt bought and developed.
+    The very detailed descriptions appears to be a summerization of all sources Scholtyseck could find.
+    The Quandt family allowed him to use their personal archives. 
+    This made it possible for him to look at the history from a number of angle and allowed him to stay impartial through out.
+    A book for all who want to know how the Quandt family achieved their extra-ordinary wealth.
+- /Selbstverliebt - aber richtig/ by Rainer Sachse
+  - A book for a very entertaining evening. 
+    If read with the necessary self-reflection, everyone can find him-/herself in this book.
 * Boring (Since Dec 2020)
 - /Woran Glauben - 10 Angebote für den aufgeklärten Menschen/ by Rudolf Taschner
   - The title is very misleading. 
