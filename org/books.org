@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Purely Functional Data Structures/ by Chris Okasaki
+- Currently reading: /tmux 2 - Productive Mouse-Free Development/ by Brian P. Hogan 
 
 
 * Computer Stuff
@@ -132,7 +132,9 @@ All list, especially /Boring/, are incomplete.
     In conclusion, /Specifying System - The TLA+ Language and Tools for Hardware and Software Engineers/ by Leslie Lamport is a good book for anyone interested in system specification.
     The logic used for system specification is described thoroughly and intuitive interpretation of most operators are provided. 
     No prior knowledge about logic or system specification are required. 
-
+- /Purely Functional Data Structures/ by Chris Okasaki
+  - Must-read for anyone you is serious about programming in functional languages.
+    Even if not everything is understood on a first read-through, it is still a valuable reference.
 * Thriller
 - /Diener der Dunkelheit/ by Donato Carrisi
 - /Der Nebelmann/ by Donato Carrisi
