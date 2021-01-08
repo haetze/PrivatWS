@@ -6,3 +6,4 @@
 #+RSS_IMAGE_URL: https://stewing.dev/img/logo-full-size.png
 #+LANGUAGE: en
 #+HTML_HEAD: <link rel="stylesheet" href="../css/main.css">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="/img/logo-full-size.png">
