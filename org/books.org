@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /tmux 2 - Productive Mouse-Free Development/ by Brian P. Hogan 
+- Currently reading: /Verified Functional Programming in Agda/ by Aaron Stump
 
 
 * Computer Stuff
@@ -76,6 +76,19 @@ All list, especially /Boring/, are incomplete.
     To be clear, this is not the authors fault, it's just the state of affairs in FOSS.
     I would say this is a great book to get an overview of how to work in FOSS or how to approach a FOSS project.
     My personal favorite sentence: ''You don't inherently deserve to be in the center of the onion, you must earn it.'' (p. 125)
+- /tmux 2 - Productive Mouse-Free Development/ by Brian P. Hogan 
+  - Establishes a good overview of /tmux/ and how to use it in a practical fashion. 
+    It is short, 79 pages, but it is in the ''pragmatic express'' series of the publisher (''The Pragmatic Programmers''), so it is advertised as such.
+    After reading it and toying around with /tmux/ I feel comfortable enough to sit down at a /tmux/-session and get around. 
+    I won't use /tmux/ on a daily basis because I live in /emacs/ and that allows me to do most of what I would be doing with /tmux/. 
+    But if you want to get started with a more major terminal setup (maybe you code in /vim/ and you want to run programs in split-screen in the same terminal), /tmux/ is a fine choice.
+    This book gets you there definitely. 
+    You won't be an expert but you will know enough to find all the information you need online and will be equipped to interpret them correctly. 
+    I especially liked the /For Future Reference/ sections. 
+    They list all commands learned or mentioned in this chapter.
+    Normally, I would keep such a list myself, but it is easier if they just but it in the book.
+    It would be even better if they additionally but a complete list in the back or something.
+    All in all, well worth a read if you are interested in /tmux/ and since it is so short it isn't even a huge time investment to get started with the basics.
 ** Mathematics
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
