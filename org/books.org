@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: 
+- Currently reading: /Modern Vim: Craft Your Development Environment with Vim 8 and Neovim/ by Drew Neil
 
 
 * Computer Stuff
