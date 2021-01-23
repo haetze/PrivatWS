@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Verified Functional Programming in Agda/ by Aaron Stump
+- Currently reading: 
 
 
 * Computer Stuff
@@ -28,6 +28,21 @@ All list, especially /Boring/, are incomplete.
 - /The Rust Programming Language/ by Steve Klabnik, Carol Nichols, and Contributions from the Rust Community
 - /Real World Haskell/ by Bryan O'Sullivan, John Goerzen, and Don Stewart
 - /Type-Driven Development with Idris/ by Edwin Brady
+- /Verified Functional Programming in Agda/ by Aaron Stump
+  - Great introduction to dependent types.
+    Most examples that are implemented are founded in Computer Science and Mathematics. (eg. Kripke-Structures, Huffman-Encodings, Theorems about Boolean operations, etc.) 
+    If you are looking for a practical introduction to improve your programs, you might be better suited with /Type-Driven Development with Idris/ by Edwin Brady. 
+    It also, as the title suggests, focuses more on a new development style compared to /Verified Functional Programming in Agda/ by Aaron Stump.
+    This is not to mean, that you can't use Type-Driven Development with Agda, it is just not focused on in this book. 
+    Most examples should be fairly straight forward to translate any program in either language in the other, their underlying constructs are very similar after all.
+    
+    What really annoyed me was not the content at all but the way it is printed. (Yes, I read the print version.)
+    The right margin on the left page is to small. 
+    If you open book ''normally'' (like opening it on a flat surface) you can't read the whole page. 
+    A few letters in very line are hidden in the inner margin.
+    This is just annoying because you could easily have in increased the right margin and decrease the left margin because the left margin is very big.
+    Unnecessarily big even. 
+    That would be a easy fix to an annoying problem. 
 ** (Operating) Systems
 - /Absolute FreeBSD/ by Michael W. Lucas
 - /Understanding the Linux Kernel/ by Daniel P. Bovet & Marco Cesati
