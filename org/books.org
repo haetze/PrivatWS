@@ -9,7 +9,7 @@
 
 All list, especially /Boring/, are incomplete.
 
-- Currently reading: /Modern Vim: Craft Your Development Environment with Vim 8 and Neovim/ by Drew Neil
+- Currently reading: /Advanced Topics in Types and Programming Languages/ edited by Benjamin C. Pierce
 
 
 * Computer Stuff
@@ -104,6 +104,15 @@ All list, especially /Boring/, are incomplete.
     Normally, I would keep such a list myself, but it is easier if they just but it in the book.
     It would be even better if they additionally but a complete list in the back or something.
     All in all, well worth a read if you are interested in /tmux/ and since it is so short it isn't even a huge time investment to get started with the basics.
+- /Modern Vim: Craft Your Development Environment with Vim 8 and Neovim/ by Drew Neil
+  - /Modern Vim/ introduces useful extensions to Vim and Neovim. 
+    The first four chapters focus on plugins to ease opening files (chap. three or navigating to errors (chap. four).
+    It later also introduces built-in features like Session (chap. 6) that allow to quickly return to a previous state.
+    Useful for everybody who wants to know how to bring their Vim setup to the next level.
+    If you want an introduction, you should start with /Practical Vim/ by the same author.
+    The basics are prerequisites and not explained at all. 
+    Sadly, that is not clear from the title but anyone looking for such a book probably knows enough to first go for /Practical Vim/.
+    It is a classic after all.
 ** Mathematics
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
