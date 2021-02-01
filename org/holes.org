@@ -1,0 +1,215 @@
+#+TITLE: Idris' most important Feature
+#+DATE: 01 Feb 2021
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard.stewing@udo.edu
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+Yesterday I saw this discussion on [[https://news.ycombinator.com/item?id=25978190][HN]]. 
+The author points out that ''static typing is pointless'' because the static type checker is just a crappy tool to encode simple invariants. ([[https://medium.com/better-programming/why-i-still-lisp-and-you-should-too-18a2ae36bd8][Link]])
+More interesting invariants still need to be expressed in the documentation. 
+I condensed his argument here. 
+The essence is: Static Type Systems can't encode interesting invariants efficiently and make you jump through hoops for simple ones. 
+So he rather not have these hoops and use dynamic types. [fn::I'm not sure what I mean with interessting here either.
+ He talkes about a sorted array as an example. 
+I don't know if that's interesting, but let's go with kind of invariant.]
+
+I don't intend to spend a long time arguing against his points. 
+The argument honestly bores me. 
+I think he is wrong. 
+He thinks he knows better than the computer which operations are acceptable and which are not. 
+I'm happy that he trusts himself and others enough to work like that. 
+I rather have a buddy who points out when I'm sloppy. 
+Does that mean I have to do things his way? Yes. 
+In return, I have some sense of guaranteed quality and can focus on other things. 
+
+All this talking about Types made me think.
+What makes them ergonomic? Why do I enjoy writing programs in Haskell more than writing them Rust? [fn::I enjoy writing Rust a lot. Cargo is so much nicer to use than Stack. (Yes, Stack does more but still)]
+They are very similar in terms of their Type System.[fn::I know there are differences, but it's close enough for me.] 
+Yes, I like Haskell's syntax a lot more than Rust's. 
+On the other hand, Rust gives me no garbage collection, which is pretty sweet. 
+There is one thing I can't do in Rust (or at least don't know how) that is the greatest thing when I'm working on a program. 
+Holes!
+
+I first came across them in Idris, where you use them extensively.[fn:: See /Type Driven Development with Idris/ by Edwin Brady.]
+They are probably a lot older. 
+Coq has probably had them for years. [fn::Agda has them too. If you want to program with dependented Types, I would advice to use Agda. Maybe that changes when Idris 2.0 is released.]
+There they are most commonly used for proof goals. 
+Each goal (some statement to prove) corresponds to a term (the proof). 
+If you have provided the term, then the hole is filled, and the goal disappears. 
+If that doesn't make much sense like this, don't worry, we will talk about programming now. 
+
+Unlike Coq, Idris is first and foremost a dependently typed programming language, not a proof assistant. 
+Yes, you can prove stuff, but I would not call it the end goal. [fn::It is not very ergonomic. The Coq's tactics read a lot more like proofs humans would write.]
+When you are developing a program, the program is longer incomplete than complete. 
+A whole allows you to tell the compile: 
+''I'm not done. Please help me.''
+Let's talk code.
+Imagine we are writing the map function. 
+And we know there are two cases (empty and non-empty lists), we don't know how to fill in the result. 
+We could therefore write something like this:
+
+#+begin_src idris
+my_map : (a -> b) -> List a -> List b
+my_map f [] = ?hole_1
+my_map f (x::xs) = ?hole_2
+#+end_src
+
+We can now ask the compile for help. The compiler responds with two things:
+1. The Type we need to construct. In this case, the return type of the function.
+2. All bound variables and the corresponding types.
+
+#+begin_src verbatim
+- + List.hole_1 [P]
+ `--            b : Type       \
+                a : Type        > Context/Scope
+                f : a -> b     /
+     ----------------------
+      List.hole_1 : List b    <- Type we need to construct
+
+- + List.hole_2 [P]
+ `--            b : Type
+                a : Type
+                f : a -> b
+                x : a
+               xs : List a
+     ----------------------
+      List.hole_2 : List b
+#+end_src
+
+Maybe, I get overly excited, but this is useful. 
+The big downside about type inference is, you can't see what Type a variable has by looking where it is declared. 
+Holes fix this. 
+I can now look at how to get to the Type I want. 
+In the first case, we don't have a choice. 
+(If we want the function to be total.)
+
+#+begin_src idris
+my_map : (a -> b) -> List a -> List b
+my_map f [] = []
+my_map f (x::xs) = ?hole_2
+#+end_src
+
+#+begin_src verbatim
+- + List.hole_2 [P]
+ `--            b : Type
+                a : Type
+                f : a -> b
+                x : a
+               xs : List a
+     ----------------------
+      List.hole_2 : List b
+#+end_src
+
+So, we fill the whole and compile again. 
+The compile checks what we have done and now only shows us the second hole. 
+Now let's reason about what we want to do. 
+We want to transform the list. 
+It, therefore, stands to reason that we probably want to keep the structure of the list. 
+Hence, we want the list constructor (that's the (::) operator) at the function's top level. 
+So we probably want something like:
+
+#+begin_src idris
+my_map : (a -> b) -> List a -> List b
+my_map f [] = []
+my_map f (x::xs) = ?hole_1 :: ?hole_2
+#+end_src
+
+#+begin_src verbatim
+- + List.hole_1 [P]
+ `--            b : Type
+                a : Type
+                f : a -> b
+                x : a
+               xs : List a
+     ----------------------
+      List.hole_1 : b
+
+- + List.hole_2 [P]
+ `--            b : Type
+                a : Type
+                f : a -> b
+                x : a
+               xs : List a
+     ----------------------
+      List.hole_2 : List b
+
+#+end_src
+
+We split the hole into two parts. 
+For the first, we, again, don't have a choice. 
+(This time for real.) 
+In the context of the function, we only have one way to create the Type ''b''. 
+That is by applying the function to the head of the list. 
+Resulting in:
+
+#+begin_src idris
+my_map : (a -> b) -> List a -> List b
+my_map f [] = []
+my_map f (x::xs) = f x :: ?hole_2
+#+end_src
+
+#+begin_src verbatim
+- + List.hole_2 [P]
+ `--            b : Type
+                a : Type
+                f : a -> b
+                x : a
+               xs : List a
+     ----------------------
+      List.hole_2 : List b
+#+end_src
+
+With the same argument about the list's structure, we probably want to use the list's tail. 
+So how can we transform it? 
+We can use the function we are currently defining! 
+And tada, we created the map function:
+
+#+begin_src idris
+my_map : (a -> b) -> List a -> List b
+my_map f [] = []
+my_map f (x::xs) = f x :: my_map f xs
+#+end_src
+
+This example probably seems rather pointless. 
+1. The function is straightforward.
+2. There are at most four variables.
+
+I agree. 
+But the same technique scales to more involved functions. 
+Holes allow you to let the compiler tell you the local scope of the function you are defining. 
+That means I don't need to keep track of what is in scope. 
+The compiler does. 
+Even more, when it shows me the types of things in scope. 
+Of course, the more information resides in the Type, the more valuable this information becomes. 
+With enough info provided, the compiler can even construct the correct term. [fn::For example, the =map= function for Vectors (Lists with the length encoded in the Type) can be constructed just from its Type.] 
+In this case, the compiler can't, and in fact, the problem is not generally solvable, but it can provide a good starting point.
+
+This easy inspection of a function's environment is something I miss in Rust, mainly because the error message types seem to get unwieldy long very quickly. 
+I would like to have something similar in Rust. [fn::With the LSP, the editor can show Types when you over a variable with the cursor, but that's to much movement for my taste.]
+I would also like to have a REPL if we are talking about things I want. 
+But if I had to pick one, it would be Holes with the inspection capabilities shown above. 
+I compared Rust and Haskell in the beginning and then went on to talk about Idris. 
+Haskell also has holes. 
+They are by far not as pretty as Idris'. 
+They look like a terrible error message, but they provide the same functionality, and I use them regularly. 
+Holes allow me to put something else into the compiler. 
+The Type System keeps track of proper operations for me, so I don't have to think about that and holes keep track of variables in scope and their types for me. 
+Now, I don't have to scan the code for variables and potentially miss one; I can ask the compiler to tell me what I have available. 
+Dependent Types are fantastic and allow me to express more invariants, but they do have a cost. 
+These invariants create proof obligations and they do have some cost. 
+And not everyone is willing or able to pay this cost in a project. 
+I do see broad applicability for holes, though. 
+Maybe you are unsure about the argument to a function. 
+Put a hole in its place, compile and first take a look at what you have available. 
+For me, that seems like an extensive use case. 
+Maybe I'm just not smart enough to keep all these things in my head at all times, and this solves a problem only I have, but I doubt that. 
+
+In summary: Holes allow you to compile incomplete programs. 
+The compiler helps you fill these holes by providing the context for each hole. 
+This context consists of the local variables and their Types. 
+Because the compiler keeps track of these variables, you don't have to scan the code and potentially miss one, hence lifting a programmer's burden. 
+Additionally, even though they are beneficial when combined with an expressive Type System, their applicability seems not limited to those. 
+(At least in theory.)
+All this makes holes the most important feature Idris has. (In my opinion of course.)
