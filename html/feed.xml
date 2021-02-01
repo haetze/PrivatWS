@@ -14,8 +14,8 @@
   <link>https://stewing.dev</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Sat, 23 Jan 2021 10:46:18 +0100</pubDate>
-  <lastBuildDate>Sat, 23 Jan 2021 10:46:18 +0100</lastBuildDate>
+  <pubDate>Mon, 01 Feb 2021 15:35:07 +0100</pubDate>
+  <lastBuildDate>Mon, 01 Feb 2021 15:35:07 +0100</lastBuildDate>
   <generator>Emacs 27.1 Org-mode 9.3.7</generator>
   <webMaster>richard@stewing.dev (Richard Stewing)</webMaster>
   <image>
@@ -65,6 +65,24 @@
     I have so many thoughts about <i>Competing with Unicorns</i> by Jonathan Rasmusson that I felt the need to sort my thoughts more thoroughly. 
     If you want the one-sentence summary: ''Spotify is a great company to work for, and its management style is superior to anything else.''
     I'm not saying the statement is wrong, but it's so unreflected and uncritical. I will get to more details soon, but this is my first impression.
+    </p>
+    ]]></description>
+  </item>
+
+  <item>
+    <title>Idris' most important Feature</title>
+    <link>https://stewing.dev/html/holes.html</link>
+    <author>richard@stewing.dev (Richard Stewing)</author>
+    <guid isPermaLink="false">https://stewing.dev/html/holes.html</guid>
+    <pubDate>Mon, 01 Feb 2021 15:40:00 +0100</pubDate>
+
+    <description><![CDATA[<p>
+    Yesterday I saw this discussion on <a href="https://news.ycombinator.com/item?id=25978190">HN</a>. 
+    The author points out that ''static typing is pointless'' because the static type checker is just a crappy tool to encode simple invariants. (<a href="https://medium.com/better-programming/why-i-still-lisp-and-you-should-too-18a2ae36bd8">Link</a>)
+    More interesting invariants still need to be expressed in the documentation. 
+    I condensed his argument here. 
+    The essence is: Static Type Systems can't encode interesting invariants efficiently and make you jump through hoops for simple ones. 
+    So he rather not have these hoops and use dynamic types.
     </p>
     ]]></description>
   </item>

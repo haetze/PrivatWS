@@ -27,3 +27,16 @@
 #+begin_src emacs-lisp :exports results :results raw
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
+
+
+* Idris' most important Feature
+:PROPERTIES:
+:RSS_PERMALINK: html/holes.html
+:PUBDATE:  <2021-02-01 Mon 15:40>
+:END:
+
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
