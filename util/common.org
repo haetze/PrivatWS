@@ -17,12 +17,21 @@
 [[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
 
 #+attr_html: :style position: fixed; top: 240px; left: 5px;
+[[../html/Keys.html][Public Keys]]
+
+#+attr_html: :style position: fixed; top: 270px; left: 5px;
 [[https://github.com/haetze/][GitHub]]
 
+#+attr_html: :style position: fixed; top: 300px; left: 5px;
+[[../html/books.html][Books I read]]
+
 #+attr_html: :style position: fixed; top: 330px; left: 5px;
-[[../html/blog.html][Blog]]
+[[../html/SHA-256.html][SHA 256 Calculator]]
 
 #+attr_html: :style position: fixed; top: 360px; left: 5px;
+[[../html/blog.html][Blog]]
+
+#+attr_html: :style position: fixed; top: 390px; left: 5px;
 [[../html/feed.xml][RSS Feed]]
 
 #+attr_html: :style position: fixed; bottom: 20px; left: 5px;

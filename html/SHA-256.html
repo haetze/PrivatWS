@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-01-23 Sat 10:46 -->
+<!-- 2021-02-06 Sat 20:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SHA-256</title>
@@ -269,15 +269,27 @@ for the JavaScript code in this tag.
 </p>
 
 <p style="position: fixed; top: 240px; left: 5px;">
-<a href="https://github.com/haetze/" style="position: fixed; top: 240px; left: 5px;">GitHub</a>
+<a href="../html/Keys.html" style="position: fixed; top: 240px; left: 5px;">Public Keys</a>
+</p>
+
+<p style="position: fixed; top: 270px; left: 5px;">
+<a href="https://github.com/haetze/" style="position: fixed; top: 270px; left: 5px;">GitHub</a>
+</p>
+
+<p style="position: fixed; top: 300px; left: 5px;">
+<a href="../html/books.html" style="position: fixed; top: 300px; left: 5px;">Books I read</a>
 </p>
 
 <p style="position: fixed; top: 330px; left: 5px;">
-<a href="../html/blog.html" style="position: fixed; top: 330px; left: 5px;">Blog</a>
+<a href="../html/SHA-256.html" style="position: fixed; top: 330px; left: 5px;">SHA 256 Calculator</a>
 </p>
 
 <p style="position: fixed; top: 360px; left: 5px;">
-<a href="../html/feed.xml" style="position: fixed; top: 360px; left: 5px;">RSS Feed</a>
+<a href="../html/blog.html" style="position: fixed; top: 360px; left: 5px;">Blog</a>
+</p>
+
+<p style="position: fixed; top: 390px; left: 5px;">
+<a href="../html/feed.xml" style="position: fixed; top: 390px; left: 5px;">RSS Feed</a>
 </p>
 
 <p style="position: fixed; bottom: 20px; left: 5px;">
@@ -327,11 +339,11 @@ document.body.onscroll = function(e) {
 </script>
 
 <p>
-Check sums summarize a file into a single number.
-The algorithm to calculate this number is designed in way that makes it hard to calculate a file with a given check sum.
-This allows them to be used to verify that the file was not changed during transmission or over time.
+Checksums summarize a file into a single number.
+The algorithm calculates this number that makes it hard to find a file with a given checksum.
+This fact allows them to be used to verify that the file was not changed during transmission or over time.
 To verify your file, follow the steps below. 
-If you don't enter the check sum into the text field, you have to compare them by hand.
+If you don't enter the checksum into the text field, you have to compare them by hand. 
 Files chosen on this site never leave your computer, all calculations happen locally.
 </p>
 
@@ -339,6 +351,49 @@ Files chosen on this site never leave your computer, all calculations happen loc
 2. (Optional) Paste Expected SHA-256: <input type="text" oninput="Main()"><br>
 <p id="output-hash"></p>
 <p id="output-equal"></p>
+<a href="javascript:void(0);" onclick="document.getElementsByClassName('src src-inline-js-with-code')[0].style.visibility = 'visible';">Verify Code.</a>
+
+<div class="org-src-container">
+<pre class="src src-inline-js-with-code">const binStringOfFile = file =&gt; new Promise((resolve, reject) =&gt; {
+    const reader = new FileReader();
+    reader.readAsBinaryString(file);
+    reader.onload = () =&gt; resolve(reader.result);
+    reader.onerror = error =&gt; reject(error);
+});
+
+async function Main() {
+   const file = document.querySelector('input[type=file]').files[0];
+   const fileString = await binStringOfFile(file);
+   const sha = await digestMessage(fileString);
+   document.getElementById("output-hash").innerHTML = "Calculated SHA-256:" + sha;
+   const inputSHA = document.querySelector('input[type=text]').value;
+   const outputEq = document.getElementById("output-equal");
+   if(inputSHA != "") {
+     if(inputSHA == sha){
+       var str = "Both Sums are equal."
+       str = str.concat(" You can expected that the content of the file was not changed.");
+       outputEq.innerHTML = str;
+     } else {
+       var str = "Both Sums are different.";
+       str = str.concat(" The content of the file was propably changed.");
+       outputEq.innerHTML = str;
+     }
+   }
+}
+
+async function digestMessage(string) {
+  // encode as (utf-8) Uint8Array
+  const strUint8 = new TextEncoder().encode(string);                            
+  // hash the message
+  const hashBuffer = await crypto.subtle.digest('SHA-256', strUint8);
+  // convert buffer to byte array
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  // convert bytes to hex string                     
+  const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join(''); 
+  return hashHex;
+}
+</pre>
+</div>
 
 <script type="text/javascript">
 const binStringOfFile = file => new Promise((resolve, reject) => {
@@ -357,18 +412,26 @@ async function Main() {
    const outputEq = document.getElementById("output-equal");
    if(inputSHA != "") {
      if(inputSHA == sha){
-       outputEq.innerHTML = "Both Sums are equal. You can expected that the content of the file was not changed.";
+       var str = "Both Sums are equal."
+       str = str.concat(" You can expected that the content of the file was not changed.");
+       outputEq.innerHTML = str;
      } else {
-       outputEq.innerHTML = "Both Sums are different. The content of the file was propably changed.";
+       var str = "Both Sums are different.";
+       str = str.concat(" The content of the file was propably changed.");
+       outputEq.innerHTML = str;
      }
    }
 }
 
 async function digestMessage(string) {
-  const strUint8 = new TextEncoder().encode(string);                            // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', strUint8);           // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  // encode as (utf-8) Uint8Array
+  const strUint8 = new TextEncoder().encode(string);                            
+  // hash the message
+  const hashBuffer = await crypto.subtle.digest('SHA-256', strUint8);
+  // convert buffer to byte array
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  // convert bytes to hex string                     
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); 
   return hashHex;
 }
 </script>

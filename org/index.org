@@ -5,8 +5,3 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
-
-- [[../html/CV-de-richard-stewing.html][Lebenslauf]], [[../html/CV-en-richard-stewing.html][Curriculum Vitae]]
-- [[../html/SHA-256.html][SHA 256 Calculator]]
-- [[../html/Keys.html][Public Keys]]
-- [[../html/books.html][Books]]
