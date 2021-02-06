@@ -7,7 +7,7 @@
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
 
-All list, especially /Boring/, are incomplete.
+All lists, especially /Boring/, are incomplete.
 
 - Currently reading: /Advanced Topics in Types and Programming Languages/ edited by Benjamin C. Pierce
 
