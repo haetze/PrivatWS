@@ -29,9 +29,12 @@
 [[../html/SHA-256.html][SHA 256 Calculator]]
 
 #+attr_html: :style position: fixed; top: 360px; left: 5px;
-[[../html/blog.html][Blog]]
+[[file:../html/Programming-Languages.html][PLs & Tools]]
 
 #+attr_html: :style position: fixed; top: 390px; left: 5px;
+[[../html/blog.html][Blog]]
+
+#+attr_html: :style position: fixed; top: 420px; left: 5px;
 [[../html/feed.xml][RSS Feed]]
 
 #+attr_html: :style position: fixed; bottom: 20px; left: 5px;
