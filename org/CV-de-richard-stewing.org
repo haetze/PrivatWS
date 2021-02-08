@@ -107,9 +107,10 @@
 
 {{{NEWLINE}}}
 
-| Sonstige Qualifikationen |                                     |
-|--------------------------+-------------------------------------|
-| Sprachkenntnisse:        | Englisch fließend, Deutsch fließend |
-| Hobbys:                  | Schwimmen                           |
-|--------------------------+-------------------------------------|
+| Sonstige Qualifikationen         |                                            |
+|----------------------------------+--------------------------------------------|
+| Sprachkenntnisse:                | Englisch fließend, Deutsch fließend        |
+| Hobbys:                          | Schwimmen                                  |
+| Programmiersprachen & Werkzeuge: | [[../html/Programming-Languages.org][Hier befindet sich eine vollständige Liste]] |
+|----------------------------------+--------------------------------------------|
 

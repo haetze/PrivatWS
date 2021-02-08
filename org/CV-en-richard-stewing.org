@@ -103,9 +103,10 @@
 
 {{{NEWLINE}}}
 
-| Additional Qualification |                 |
-|--------------------------+-----------------|
-| Languages:               | German, English |
-| Hobbys:                  | Swimming        |
-|--------------------------+-----------------|
+| Additional Qualification         |                                    |
+|----------------------------------+------------------------------------|
+| Languages:                       | German, English                    |
+| Hobbys:                          | Swimming                           |
+| Programming Languages and Tools: | [[../html/Programming-Languages.org][A complete list can be found here.]] |
+|----------------------------------+------------------------------------|
 
