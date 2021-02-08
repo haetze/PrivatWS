@@ -82,6 +82,9 @@
 | {{{baB}}}-{{{baE}}}                   | Studied at {{{uniB}}}                                                    |
 |---------------------------------------+--------------------------------------------------------------------------|
 | 2017-2019                             | Employed at the {{{uniB}}} as a Teaching Assistant                       |
+|                                       | - Tutor for [[https://www.cs.tu-dortmund.de/nps/de/Studium/Studienplaene/Bachelor_Inf_WS/_/WP_Softw/Katalog_Konzepte_fuer_Software/INF-BSc-213.pdf][/Funktionale Programmierung/]] (Functional Programming)        |
+|                                       | - Tutor for [[https://www.cs.tu-dortmund.de/nps/de/Studium/Ordnungen_Handbuecher_Beschluesse/Modulhandbuecher/Bachelor_Inf/INF/INF-P/INF-BSc-106.pdf][/Logik für Informatiker/]] (Logic for Computer Science)        |
+|                                       | - Writing Documentation [[https://fldit-www.cs.uni-dortmund.de/~peter/ExpNeu/Welcome.html][Expander 2]] ([[https://github.com/jokusi/expander][Expander 3]])                          |
 |---------------------------------------+--------------------------------------------------------------------------|
 | {{{baE}}}                             | Bachelor-Thesis about /Regular Model Checking/                           |
 |---------------------------------------+--------------------------------------------------------------------------|
