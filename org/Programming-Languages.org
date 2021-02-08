@@ -1,0 +1,33 @@
+#+TITLE: Programming Languages and Tools
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+- Languages
+  - C/C++
+  - Rust 
+  - Go
+  - Common Lisp
+  - Python
+  - Ruby
+  - R
+  - JavaScript
+  - SQL
+  - Prolog
+  - Erlang/OTP
+  - Haskell
+  - OCaml
+  - Idris
+  - Agda
+  - Coq
+  - Java
+- Tools
+  - vi
+  - emacs
+  - git
+  - GNU make
+  - sed, awk, etc.
+  - gnuplot
+  - tmux
+  - GNU/Linux
+  - FreeBSD
+  - Docker
