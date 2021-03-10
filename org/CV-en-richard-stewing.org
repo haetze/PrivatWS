@@ -97,7 +97,7 @@
 | 2020                                  | Won P^5-Projektgruppen-Praxis-Preises 2019                               |
 |                                       | from the Department of Computer Science, TU Dortmund                     |
 |---------------------------------------+--------------------------------------------------------------------------|
-| 2021                                  | Master-Thesis about /Taint Analysis with a Simply Typed Lambda Calculus/ |
+| 2020                                  | Master-Thesis about /Taint Analysis with a Simply Typed Lambda Calculus/ |
 |---------------------------------------+--------------------------------------------------------------------------|
 | {{{maE}}}                             | Gradutation from {{{uniM}}} ({{{M}}}, {{{Mn}}})                          |
 |---------------------------------------+--------------------------------------------------------------------------|
