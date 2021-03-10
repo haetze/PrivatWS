@@ -34,7 +34,7 @@
 #+MACRO: M M.Sc. Informatik
 #+MACRO: BN 1.9
 #+MACRO: MN 1.4
-#+MACRO: maE 2020
+#+MACRO: maE 2021
 #+MACRO: uniB TU Dortmund
 #+MACRO: uniM TU Dortmund
 
@@ -101,7 +101,7 @@
 | 2020                                  | Gewinn des P^5-Projektgruppen-Praxis-Preises 2019                         |
 |                                       | der Fakultät Informatik der TU Dortmund                                   |
 |---------------------------------------+---------------------------------------------------------------------------|
-| {{{maE}}}                             | Masterarbeit zum Thema: /Taint Analyse im einfach getypten Lambda-Kalkül/ |
+| 2021                                  | Masterarbeit zum Thema: /Taint Analyse im einfach getypten Lambda-Kalkül/ |
 |---------------------------------------+---------------------------------------------------------------------------|
 | {{{maE}}}                             | Abschluss der {{{uniM}}} mit dem                                          |
 |                                       | Erreichen eines {{{M}}} ({{{MN}}})                                        |

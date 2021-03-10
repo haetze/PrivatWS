@@ -33,7 +33,7 @@
 #+MACRO: M M.Sc. Computer Science
 #+MACRO: BN 1.9
 #+MACRO: MN 1.4
-#+MACRO: maE 2020
+#+MACRO: maE 2021
 #+MACRO: uniB TU Dortmund
 #+MACRO: uniM TU Dortmund
 
@@ -97,7 +97,7 @@
 | 2020                                  | Won P^5-Projektgruppen-Praxis-Preises 2019                               |
 |                                       | from the Department of Computer Science, TU Dortmund                     |
 |---------------------------------------+--------------------------------------------------------------------------|
-| {{{maE}}}                             | Master-Thesis about /Taint Analysis with a Simply Typed Lambda Calculus/ |
+| 2021                                  | Master-Thesis about /Taint Analysis with a Simply Typed Lambda Calculus/ |
 |---------------------------------------+--------------------------------------------------------------------------|
 | {{{maE}}}                             | Gradutation from {{{uniM}}} ({{{M}}}, {{{Mn}}})                          |
 |---------------------------------------+--------------------------------------------------------------------------|
