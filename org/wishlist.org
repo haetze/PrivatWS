@@ -1,0 +1,321 @@
+#+TITLE: Whishlist for verified Programming
+#+DATE: 28 March 2021
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard@stewing.dev
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+Verified Programming and, by extension, Verification Driven Development (VDD) focuses on writing programs that conform /provably/ to a given specification. 
+Whenever I use a tool that supports VDD, something is always missing. 
+This post will list all the things I wish I had when programming in a verified manner. 
+I'll start with a survey of what is currently out there. (At least what I'm aware of.)
+I'll focus on the things I have used personally. 
+As such, my view is by necessity limited. 
+I do think that most of these tools are very similar and, more importantly, most are research projects. 
+Their primary purpose isn't using them in production, and ergonomics are often less critical. 
+I want verified programming to become more mainstream, but it can only become mainstream if it becomes more ergonomic. 
+That's why I started working on this list. 
+But first, let's start with what's already there.
+
+* What's there? Types and SMT Solver.
+
+When doing verified programming, the main concern is how to prove things about the program. 
+There are two approaches. 
+
+One approach is using the Type System. 
+Using Types depending on terms allows the programmer to express most of mathematics. 
+Examples of such systems are [[https://github.com/agda/agda][Agda]], [[https://www.idris-lang.org][Idris]], [[https://leanprover.github.io][Lean]], or [[https://coq.inria.fr][Coq]]. [fn::Coq is not a programming language. 
+Coq-the-proof-assistant wants to prove things about programs. 
+You have to describe programs in Coq-the-language, but it is not designed for big programming projects. 
+(Lean to a lesser extent; I haven't used Lean and only read about it.)]
+The general technique employed to prove things is [[https://en.wikipedia.org/wiki/Unification_(computer_science)][unification]]. 
+You write terms in the programming language that correspond to proofs. 
+When the compiler checks the proofs by deriving the Type, the compiler unifies different expressions. 
+The disadvantage of this process is that the whole process is relatively manual. 
+Even with the years of development poured into Coq, it is still not automatic by any means.
+
+The other approach uses [[https://en.wikipedia.org/wiki/Satisfiability_modulo_theories][SMT Solvers]] like [[https://github.com/Z3Prover/z3][Z3]], [[https://cvc4.github.io][CVC4]], or [[https://alt-ergo.ocamlpro.com][Alt-Ergo]]. 
+You write the program and annotate it with assertions, pre-conditions, post-conditions, invariants, etc. 
+The SMT solver(s) then tries to prove your annotations. 
+(Examples include [[https://www.adacore.com][Ada]]/Spark or [[https://ucsd-progsys.github.io/liquidhaskell-blog/][LiquidHaskell]]) 
+Sometimes it needs help. 
+In these situations, you can guide the solver by providing additional assertions to prove later assertions. 
+Other than that, the process is automatic. 
+This automation comes at a cost. 
+Every solver can only reason about a limited set of theories. 
+
+To summarize, one approach uses such a powerful language that it can express most of mathematics. 
+Doing automatic theorem proving with this Language is hard. 
+(It's the Type Inhabitation problem. 
+The complexity of this problem depends on the Type System's expressiveness. 
+In the case of the Calculus of Construction, it is undecidable.) 
+Fully automated systems make use of specific theories to allow the computer to derive the proofs. 
+
+*Note*: /I describe these techniques as one included in the Type System and the other somewhat separate from the Type System. 
+This simplification is technically false. 
+You can also SMT solver to decide well-typedness. 
+One example of such an environment is LiquidHaskell. 
+It uses refinement Types, i.e., 
+the Type System restricts Types by predicates. 
+The separating difference is more that one is limited in expressiveness to allow for more automation and the other is not./
+
+* What I want
+
+What's following is my wishlist for verified programming. 
+The easy answer would be ''Well, I want CoC's expressiveness with the automation from SMT solver.''. 
+Well, we are not going to get that, sadly. 
+So, we need something else. 
+
+Programming Languages are a complex topic. 
+Everybody has an opinion, and these are mine. 
+Some are more tangentially related, but I think all those parts come together in one end product. 
+Hence, we should not talk about these things in isolation. 
+
+** Simple Languages
+
+I want a simple Language. 
+I like [[https://www.haskell.org][Haskell]] a lot. 
+For both my Bachelor's and my Master's Thesis, I wrote a bunch of it. 
+And it made what I was doing easy. 
+But here is the thing: It is also straightforward to add unnecessary layers of abstraction. 
+It is also very tempting. 
+The downside of this expressive power is the tendency of any program of substantial size to evolve into a DSL for writing that application. 
+Conforming to the style of an application can become hard. 
+It also doesn't help that Haskell has many constructs to do the same thing. 
+Pattern Matching alone has at least three ways to do them. 
+(Function-Level Pattern Matching, case-Statements, and LambdaCases. The last one is not Standard Haskell, but it's part of GHC, which factually defines Haskell.) 
+Which of these should the programmer use? 
+Does the application have a preferred style? 
+Do I want to communicate a specific thing with my choice? 
+(For example, do I want to express that a function is not total, e.g., throws an exception on a particular shape of input.)
+
+My point is that every codebase looks different. 
+Overall I like the approach [[https://golang.org][Go]] takes, at least in principle. 
+We can discuss the execution, but they limited the Language's expressiveness to the point that all codebases look similar. 
+It also makes tools to proof code more straightforward. 
+If a language has only a small set of features, you only have to verify these features.
+
+Additionally, you can use tools to enforce styling guides more easily. 
+Another thing Go has got down. 
+You can dislike the choices it makes, but it stops the arguments, and the code becomes more comfortable to read because of the consistency.
+
+One way to achieve simplicity in a Language is by limiting the abstractions a Language can express. 
+I took Go as an example in this section. 
+In this respect, I think Go goes too far. 
+I also believe Generics+Enums would fix 90% of the problem. 
+Generics lead me to the next point: A Strong Type Systems.
+
+** Strong Type Systems
+Strong Type Systems are great. 
+Rusts, for example, can express many things already without getting in the way for the most part. 
+Type Systems allow communicating invariants directly to the compiler. 
+They also form the theoretical foundation for things like Generics. 
+
+For me, a Strong Type System is a must in any new Programming Language. 
+They allow me to NOT worry about a bunch of things. 
+A Strong Type System constitutes a System where I have at least Types depending on Types. 
+Something like Hindley–Milner with Type-Classes is enough for most cases. 
+If we end up with complete dependent Types (Types depending on Types and/or Values.) to also prove properties about the code, that's also fine. 
+I have one prerequisite. 
+The Type System needs to be ergonomic. 
+As far as I have seen, most dependent Types still require a lot of manual work. 
+I can't tell you how many times I had to rewrite something because some addition was in the wrong order.[fn::I'm
+referring to the mechanism that changes the Type of an expression.
+Dependently typed PLs offer this mechanism. 
+You provide an identity between two terms, and this changes the Type of expression.]
+Even simple things like this become a real problem when you try to get something done, and it keeps coming. 
+Maybe we find an Algorithm that relieves the programmer from this manual work. I don't know. 
+
+We can also accomplish Efficiency through Types, another requirement I have for a new Programming Language. 
+We will talk about Efficiency as a requirement in the next section.
+
+** Efficiency 
+
+Efficiency is always a nice thing to have. 
+There are (at least) two types of Efficiency to consider when talking about programming languages. 
+Efficiency when running the resulting program and Efficiency when writing the program. 
+In this section, I'm talking about Efficiency concerning when running the program. 
+Even at runtime, there is more than one dimension to consider. 
+
+Firstly, the program's runtime efficiency, i.e., how long a program takes to run. 
+In general, you don't want a Programming Language that inherently makes things run slower. 
+If a Language runs slower than another, the Language often justifies this with convenience in another situation. 
+For example, we accept the runtime overhead Java (or the JVM) has because it allows us to have an ''executable'' that runs on more platforms. 
+Another example would be Python; we accept that Pythons runs slower because it is very convenient to program. 
+It all depends on what you value. 
+I prefer a Language that has a high runtime efficiency. 
+There are a few reasons for this. 
+
+For one, as I described above, a simple Language can't have the same level of expressiveness as a more complex Language. 
+If you limit the Language to one loop construct, you can't have a more convenient loop in another situation. 
+What this means is that the simple Language couldn't hope to compare to Languages optimized for ergonomics. 
+As such, it would be foolish to sacrifice a lot of Efficiency for more comfort. 
+Of course, you can't remove all convenience features. That would make a miserable programming language. 
+It would be essential to choose a small set of convenient features we can optimize away for runtime. 
+These features should be orthogonal to each other.
+
+I also prefer runtime Efficiency because we would already be paying a high price when developing in compilation time. 
+The basic idea is the following: If it will take a minute to prove the code anyway, why not spend the additional five seconds to do some smarts things with the compiler.
+
+There is also the notion of memory efficiency.
+Why do I want that? Well, to be perfectly honest, because we can. 
+There, of course, is only a limited number of things a Language can do to become memory efficient. 
+Most of these are data layout things the compiler can do. 
+For example, the compiler can be efficient when tagging sum-Types. 
+More prominent is the memory model a Language employs. 
+There are four ways to manage memory that I know.[fn::For each category exist more examples.]
+1. Mnual Memory Management (C)
+2. Garbage Collection (Java)
+3. Automatic Reference Counting (Swift)
+4. Ownership Types (Rust)
+
+Manual memory management is very error-prone. 
+Essentially, it is hard to guarantee the absence of use-after-frees or double-frees. 
+Garbage Collection means that you pay with a relatively high runtime cost. 
+Its behavior is also hard to predict. 
+The upside is the programmer doesn't need to care about it at all. 
+Automatic Reference Counting also has a runtime cost but is more predictable. 
+
+Sadly, it is not complete in the sense that you can create unreachable memory that won't get freed. 
+It happens when you have a reference cycle. 
+Ownership Types don't have a runtime cost because the programmer has to prove to the compiler how he uses these values. 
+
+In my opinion, a Language should use Ownership Types. 
+Rust proved that Ownership Types aren't that unergonomic. 
+They also have no runtime overhead. 
+Hence, these should be the first choice for a Programming Language directed towards verified programming.
+
+Generally, I also prefer immutable data structures. 
+Haskell's data structures are immutable. 
+Reasoning about programs becomes simpler if variables can't change. 
+The problem is that persistent data structures are less efficient in many cases. 
+To analyze them similarly, you would mutable data structures requires lazy evaluation.[fn:: Read [[https://www.cs.cmu.edu/~rwh/theses/okasaki.pdf][Purely Functional Data Structures]] by Chris Okasaki] 
+And lazy evaluation, in turn, makes programs harder to predict. 
+Persistent data structures are a solution to the state management problem. 
+Object-oriented programming tried to contain state, while persistent data structures allow you not to worry about it /as much/. 
+If you destroy a list when calculating something, it does not matter; the list still exists in the rest of the program.
+
+The good news is that Ownership Types can do the same thing. 
+They make the state manageable again. 
+Granted, they are not nearly as convenient as persistent data structures. 
+But they allow for more efficient programs in some instances; they enable the programmer to analyze them more conventionally, and they map closer to the machine.[fn:: I,
+for one, don't have a problem staying closer to the device that executes the code.
+If I need the power of mathematical abstraction, I can still use the languages that are good at it.]
+
+My last argument for Efficiency in a Programming Language targeted towards verified programming is that verification is more critical for Software that faces the outside world. 
+A high number of these are Embedded Systems, often running on low-power hardware. 
+Being not efficient isn't an option for these Systems. 
+And as I outlined above, I think Rust achieved Efficiency without sacrificing too much convenience.
+To this point, I haven't talked about the heart of the matter, Proving. 
+The following section discusses how I would like to work with a Programming Language that includes proofs of its code.
+I want to focus on the expressiveness of the language for propositions. 
+The more powerful it is, the harder it is to generate proofs for it. 
+I'll discuss these topics in the next to sections.
+
+** Semi-Automatic Proofs
+The holy grail of mathematics is probably the ability to derive whether or not a proposition is true or not. 
+We know that this can never work in the general case. 
+When talking about verified programming, we stand in front of the same problem. 
+Either we restrict the propositions and achieve high automation (LiquidHaskell) or allow a wide range of expressions at the price of manual work (Coq). 
+There is no way around this, but I think we can do better than we are currently doing. 
+Not in the general case, of course, but maybe in the usual one. 
+SMT solvers are a very code step in that direction. 
+I wish for the following things. (Some of which might not be possible; this is a wishlist after all.)
+
+First of all, we want a system that has similar derivability to SMT solvers today. 
+We don't want to take a step back. 
+Being more expressive also means that you need a proof-language. 
+It would be nice if we can use the same language we use for programming. 
+That's the situation with dependently typed programming languages, minus the automation. 
+I'm very confident somewhere someone is working on term creation for a subset of Types that would allow more proof-automation. 
+We have to get there, but I'm optimistic that we can get to a point where it gets useful.
+
+Secondly, I want more help when writing proofs manually. 
+Maybe a list of possible helpful proofs for the current goal. 
+Creating this list also sounds like an open research problem. 
+The hard part is probably balancing putting too much on the list and being too strict. 
+The wrong approach would be to try to include all eventualities. 
+A list that is too big isn't practical. 
+A stripped-down list means you will not always find the right next step. 
+Maybe we can judge the well-fittedness of the list for the current goal. 
+I don't know, but there are probably a lot of intelligent things that we can do.
+
+** Automatic Version Checks
+Version management can be annoying. 
+The idea behind versions is that we are tracking changes on a high level. 
+That's why we came up with semantic versioning. 
+The problem is that we have to assign versions correctly. 
+We can check their compatibility across versions if we define versions in terms of our code's pre-and post-conditions. [fn::How hard this 
+compatibility check is, depends on the logic.
+Maybe a syntactic comparison would be a good-enough start.]
+We could also start generating versions from them. 
+We could bump the most insignificant number when conditions remained the same, and only the ''hidden'' code changed.
+We would increase the middle number when we alter conditions, but the changes remain compatible (i.e., the new condition entails the old one). 
+And we can increment the most significant number when conditions are incompatible. 
+The dependence on side-effects of code would be visible as side-effects, and because conditions are /proven/, we can rely on this versioning scheme. 
+For me, this is a practical approach to versioning.
+
+** Automatic Test Generations
+In the paragraph before, I said conditions would be /proven/. 
+I'm realistic. 
+We won't verify every condition.[fn::But we should try to prove all conditions!]
+But we can nevertheless use the defined conditions to generate tests. 
+Ideally, conditions correspond to executable boolean expressions. 
+If we can generate (random) values that fulfill a function's pre-condition, 
+execute the function, and test that the output meets the post-condition, we can test the function very cheaply. 
+We at least don't have to write separate tests. 
+Tests don't replace proves, but they are a lot better than just hoping the program behaves expectedly. 
+This approach also has the advantage that code and the tests are hard to diverge. 
+We tie pre-and post-conditions to the function (i.e., the code), the conditions, in turn, generate the tests.
+
+** Holes
+I'm not going to repeat why Holes are fantastic. 
+You can read about it [[../html/holes.html][here]]. 
+I want to note that verified assertions could be part of the environment, stating variables' properties. 
+(This is something I missed when testing out Ada's Spark.) 
+
+This could look something like this:
+#+begin_example
+x : Int
+y : Int
+_ : x < 10
+_ : x >= 0
+_ : 10 < y
+---------------------
+r : Int
+_ : r > 0
+_ : r < 10
+#+end_example
+
+** Escape Hatches
+At some point, when developing verified Software, we have to leave the comfort of verification and proves and go out into the real world. 
+It is my firm belief that we need to control these escape hatches. 
+Otherwise, they taint the whole program. 
+I don't know what the right approach is. 
+Do we need a (theoretical) heavyweight system like Monads or other Effect Systems? Maybe we can get away with a simple marker system like Rust's unsafe. 
+They mark a function (or block) and lift some restrictions. 
+I want something relatively simple to use. 
+I would also like to state properties at the end of the unverified block to test at runtime and subsequently used as assumptions for proves. 
+Of course, this can only work for some assumptions efficiently, but I also think that communicating these assumptions in code has a lot of value.
+
+* Conclusion
+This article is a wishlist of things I want when programming with verification in mind. 
+I didn't survey current research before writing it. 
+I didn't even think everything I want through. 
+The problems that would need to be solved to satisfy my wishlist are challenging. 
+That's why are called it a wishlist. 
+It is also a decent possibility this list is unsatisfiable. 
+I just wanted to get these things out of my head. 
+I can look at them and read a short explanation of what I meant. 
+I will now shortly summarize my wishlist.
+
+I want a *simple* language I can keep in my head, and there are not too many ways to achieve the same thing. 
+The language should also use a *robust Type System*, maybe of the Hindley–Milner variant. 
+These Type Systems are just a relatively cheap way to eliminate specific bugs, and Rust showed that a  language with these features can be *efficient*.
+Proving should be *semi-automatic*. For a subset, it should be completely automatic. 
+For more involved proves, we can still fall back to a proof language. 
+We should also use the established conditions to *derive version information* and *tests*. 
+*Holes* in programs are a valuable tool to end up with a correct program, and I want to employ them here. 
+*Escape hatches* should be simple and allow to establish some properties to be later used as assumptions. 
+These are the things I want from a programming environment geared towards verified programming.

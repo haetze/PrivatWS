@@ -1,7 +1,7 @@
 #+TITLE: Idris' most important Feature
 #+DATE: 01 Feb 2021
 #+AUTHOR: Richard Stewing
-#+EMAIL: richard.stewing@udo.edu
+#+EMAIL: richard@stewing.dev
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
