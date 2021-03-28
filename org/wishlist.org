@@ -52,13 +52,13 @@ The complexity of this problem depends on the Type System's expressiveness.
 In the case of the Calculus of Construction, it is undecidable.) 
 Fully automated systems make use of specific theories to allow the computer to derive the proofs. 
 
-*Note*: /I describe these techniques as one included in the Type System and the other somewhat separate from the Type System. 
+*Note*: I describe these techniques as one included in the Type System and the other somewhat separate from the Type System. 
 This simplification is technically false. 
 You can also SMT solver to decide well-typedness. 
 One example of such an environment is LiquidHaskell. 
 It uses refinement Types, i.e., 
 the Type System restricts Types by predicates. 
-The separating difference is more that one is limited in expressiveness to allow for more automation and the other is not./
+The separating difference is more that one is limited in expressiveness to allow for more automation and the other is not.
 
 * What I want
 

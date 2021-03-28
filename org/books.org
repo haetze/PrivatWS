@@ -9,7 +9,7 @@
 
 All lists, especially /Boring/, are incomplete.
 
-- Currently reading: /Advanced Topics in Types and Programming Languages/ edited by Benjamin C. Pierce
+- Currently reading: 
 
 
 * Computer Stuff
@@ -117,6 +117,16 @@ All lists, especially /Boring/, are incomplete.
 - /Category Theory For Programmers/ by Bartosz Milewski
 - /The Little Typer/ by Daniel P. Friedman & David Thrane Chstiansen
 - /Types and Programming Languages/ by Benjamin C. Pierce
+- /Advanced Topics in Types and Programming Languages/ edited by Benjamin C. Pierce
+  - This is a creat survey of different topics in this area.
+    The writers' style resonated with me differently from chapter to chapter. 
+    That's probably the biggest reason why I enjoyed some chapters more than others.
+    Since you are not really expected to read it cover to cover you can skip to the parts your are interested in and will be fine.
+    I would expect that the people who read this have some familiarity with the material and are looking for specific piece of information or a reference, so it's fine.
+    I really enjoyed it and took my time to work through some of the exercises. (Most of them have solutions in the back.)
+    Definitely worth a read if you are looking to broaden your perspective about what Types can do for programming languages.
+    Full Disclosure: This is more oriented towards research than the predecessor, their are no implementations in this book. 
+    I also found a few errors, nothing major but if something looks weird it may be worth to go to [[https://www.cis.upenn.edu/~bcpierce/attapl/resources.html][this]] page. It has resources and errata for the book.
 - /Type Theory and Formal Proof/ by Rob Nederpelt & Herman Geuvers
 - /The Art of Computer Programming - Volume 1/ by Donald E. Knuth
 - /The Art of Computer Programming - Volume 2/ by Donald E. Knuth
