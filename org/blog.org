@@ -25,7 +25,6 @@ One pet-peeve of mine is version control.
 #+end_src
 
 
-
 * Competing with Unicorns
 :PROPERTIES:
 :RSS_PERMALINK: html/competing_with_unicorns.html
@@ -58,6 +57,31 @@ More interesting invariants still need to be expressed in the documentation.
 I condensed his argument here. 
 The essence is: Static Type Systems can't encode interesting invariants efficiently and make you jump through hoops for simple ones. 
 So he rather not have these hoops and use dynamic types.
+
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
+
+
+* Wishlist for verified Programming
+:PROPERTIES:
+:RSS_PERMALINK: html/wishlist.html
+:PUBDATE:  <2021-03-28 Sun 17:00>
+:END:
+Verified Programming and, by extension, Verification Driven Development (VDD) focuses on writing programs that conform provably to a given specification. 
+Whenever I use a tool that supports VDD, something is always missing. 
+This post will list all the things I wish I had when programming in a verified manner. 
+I'll start with a survey of what is currently out there. 
+(At least what I'm aware of.) 
+I'll focus on the things I have used personally. 
+As such, my view is by necessity limited. 
+I do think that most of these tools are very similar and, more importantly, most are research projects. 
+Their primary purpose isn't using them in production, and ergonomics are often less critical. 
+I want verified programming to become more mainstream, but it can only become mainstream if it becomes more ergonomic. 
+That's why I started working on this list. 
+But first, let's start with what's already there.
 
 ** Published  :ignore:published:
 /Published on {{{property(PUBDATE)}}}./

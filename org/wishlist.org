@@ -1,4 +1,4 @@
-#+TITLE: Whishlist for verified Programming
+#+TITLE: Wishlist for verified Programming
 #+DATE: 28 March 2021
 #+AUTHOR: Richard Stewing
 #+EMAIL: richard@stewing.dev

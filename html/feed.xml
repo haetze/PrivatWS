@@ -14,8 +14,8 @@
   <link>https://stewing.dev</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 01 Feb 2021 15:35:07 +0100</pubDate>
-  <lastBuildDate>Mon, 01 Feb 2021 15:35:07 +0100</lastBuildDate>
+  <pubDate>Sun, 28 Mar 2021 16:55:34 +0200</pubDate>
+  <lastBuildDate>Sun, 28 Mar 2021 16:55:34 +0200</lastBuildDate>
   <generator>Emacs 27.1 Org-mode 9.3.7</generator>
   <webMaster>richard@stewing.dev (Richard Stewing)</webMaster>
   <image>
@@ -45,7 +45,6 @@
     </p>
     ]]></description>
   </item>
-
 
 
   <item>
@@ -83,6 +82,31 @@
     I condensed his argument here. 
     The essence is: Static Type Systems can't encode interesting invariants efficiently and make you jump through hoops for simple ones. 
     So he rather not have these hoops and use dynamic types.
+    </p>
+    ]]></description>
+  </item>
+
+
+  <item>
+    <title>Wishlist for verified Programming</title>
+    <link>https://stewing.dev/html/wishlist.html</link>
+    <author>richard@stewing.dev (Richard Stewing)</author>
+    <guid isPermaLink="false">https://stewing.dev/html/wishlist.html</guid>
+    <pubDate>Sun, 28 Mar 2021 17:00:00 +0200</pubDate>
+
+    <description><![CDATA[<p>
+    Verified Programming and, by extension, Verification Driven Development (VDD) focuses on writing programs that conform provably to a given specification. 
+    Whenever I use a tool that supports VDD, something is always missing. 
+    This post will list all the things I wish I had when programming in a verified manner. 
+    I'll start with a survey of what is currently out there. 
+    (At least what I'm aware of.) 
+    I'll focus on the things I have used personally. 
+    As such, my view is by necessity limited. 
+    I do think that most of these tools are very similar and, more importantly, most are research projects. 
+    Their primary purpose isn't using them in production, and ergonomics are often less critical. 
+    I want verified programming to become more mainstream, but it can only become mainstream if it becomes more ergonomic. 
+    That's why I started working on this list. 
+    But first, let's start with what's already there.
     </p>
     ]]></description>
   </item>

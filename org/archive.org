@@ -40,3 +40,13 @@
 #+begin_src emacs-lisp :exports results :results raw
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
+* Wishlist for verified Programming
+:PROPERTIES:
+:RSS_PERMALINK: html/wishlist.html
+:PUBDATE:  <2021-03-28 Sun 17:00>
+:END:
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
