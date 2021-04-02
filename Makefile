@@ -1,6 +1,7 @@
 ### Makefile --- 
 
-## Author: richard.stewing@udo.edu
+## Author: richard@stewing.dev
+## LICENSE: GPLv3
 
 HTML-DIR:= html
 REPOSITORY:=https://github.com/haetze/PrivatWS

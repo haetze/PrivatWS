@@ -5,6 +5,7 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
 
 Verified Programming and, by extension, Verification Driven Development (VDD) focuses on writing programs that conform /provably/ to a given specification. 
 Whenever I use a tool that supports VDD, something is always missing. 

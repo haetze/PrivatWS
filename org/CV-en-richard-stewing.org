@@ -2,6 +2,7 @@
 #+SUBTITLE: [[./CV-de-richard-stewing.html][Deusche Version]]
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
 
 # Infos
 #+MACRO: birthday 22.04.1997

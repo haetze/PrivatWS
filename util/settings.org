@@ -2,6 +2,7 @@
 #+AUTHOR: Richard Stewing
 #+EMAIL: richard@stewing.dev
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil html-style:t
+# LICENSE: GPLv3
 #+HTML_LINK_HOME: https://stewing.dev
 #+RSS_IMAGE_URL: https://stewing.dev/img/logo-full-size.png
 #+LANGUAGE: en

@@ -3,6 +3,7 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: de
+# LICENSE: GPLv3
 
 # Infos
 #+MACRO: birthday 22.04.1997

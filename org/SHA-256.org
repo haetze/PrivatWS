@@ -6,6 +6,7 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
+# LICENSE: GPLv3
 
 Checksums summarize a file into a single number.
 The algorithm calculates this number that makes it hard to find a file with a given checksum.

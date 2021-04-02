@@ -2,6 +2,7 @@
 ;;; Makes local packages available
 ;;; src export requires emacs-htmlize (https://melpa.org/#/htmlize)
 ;;; rss export requieres ox-rss.el from org-contrib
+;;; LICENSE: GPLv3
 (package-initialize)
 
 (setq org-use-property-inheritance t)

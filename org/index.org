@@ -5,3 +5,4 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3

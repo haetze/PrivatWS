@@ -1,6 +1,7 @@
 #+TITLE: Programming Languages and Tools
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
 
 - Languages
   - C/C++

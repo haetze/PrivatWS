@@ -5,6 +5,7 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
 
 Yesterday I saw this discussion on [[https://news.ycombinator.com/item?id=25978190][HN]]. 
 The author points out that ''static typing is pointless'' because the static type checker is just a crappy tool to encode simple invariants. ([[https://medium.com/better-programming/why-i-still-lisp-and-you-should-too-18a2ae36bd8][Link]])

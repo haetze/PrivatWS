@@ -6,6 +6,7 @@
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
 #+LANGUAGE: en
+# LICENSE: GPLv3
 
 All lists, especially /Boring/, are incomplete.
 

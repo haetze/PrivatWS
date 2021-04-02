@@ -5,6 +5,7 @@
 #+OPTIONS: toc:nil
 #+SETUPFILE: ../util/settings.org
 #+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
 
 * richard@stewing.dev
 - Uploaded: 13-11-2020
