@@ -16,3 +16,5 @@
 E-Mail: richard@stewing.dev
 
 Es wird keine Verantwortung für die Darstellung, den Inhalt oder irgendeine Verbindung zu Webseiten Dritter übernommen.
+Der Code dieser Webseite werden unter der GPLv3-Lizenz veröffentlicht.
+Eine Copy der Lizenz kann [[http://www.gnu.de/documents/gpl.de.html][hier]] eingesehen werden.
