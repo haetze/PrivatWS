@@ -10,7 +10,7 @@
 
 All lists, especially /Boring/, are incomplete.
 
-- Currently reading: 
+- Currently reading: /Programming Clojure, Third Edition/ by Alex Miller with Stuart Halloway and Aaron Bedra
 
 
 * Computer Stuff
@@ -50,6 +50,15 @@ All lists, especially /Boring/, are incomplete.
 - /Distributed Systems - Principles and Paradigms/ by Andrew S. Tanenbaum & Maarten Van Steen
 - /The Design and Implementation of the FreeBSD Operating System/ by Marshell Kirk McKusick, George V. Neville-Neil, and Robert N. M. Watson
 ** Tools
+- /Autotools, 2nd Edition: A Practitioner's Guide to GNU Autoconf, Automake, and Libtool/ by John Calcote
+  - Only skimmed to get an overview of how these tools work and to use them in a project.
+    They seem mostly targetted towards C only.
+    I suspect they can be used with other languages reasonably well too but that is not explained.
+    If you have to use these tools and need(/want) an introduction in book form, this might be a good book.
+    I strongly recommending reading the physical copy. 
+    The kindle edition is hard to read because the listings are broken sometimes, there is so view text on the screen that 
+    explainations of the listing is split through many kindle-pages and jumping back and forth is not really quick.
+    I generally read these books on paper so I rarely comment on the kindle edition but this time I read it on the kindle and it was not fun.
 - /Managing Projects with GNU Make/ by Robert Mecklenburg
 - /Practical Vim/ by Drew Neil
 - /Pro Git/ by Scott Chacon & Ben Straub
