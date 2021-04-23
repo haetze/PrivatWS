@@ -15,6 +15,7 @@ All lists, especially /Boring/, are incomplete.
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
+  - Also listended to the Audible audiobook. It is really fun!
 ** Programming Languages
 - /Parallel and Concurrent Programming in Haskell/ by Simon Marlow
 - /Programming in GO/ by Mark Summerfield
