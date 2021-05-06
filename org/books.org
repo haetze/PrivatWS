@@ -10,13 +10,17 @@
 
 All lists, especially /Boring/, are incomplete.
 
-- Currently reading: /The GO Programming Language/ by Alan A. A. Donovan and Brian W. Kernighan
+- Currently reading: 
 
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
   - Also listended to the Audible audiobook. It is really fun!
 ** Programming Languages
+- /The GO Programming Language/ by Alan A. A. Donovan and Brian W. Kernighan
+  - Probably the best book-form introduction to Go I know of.
+    It introduces all the major concept of Go with great examples through out. 
+    I would wish though that modules would be covered in ''Chapter 10: Packages and the Go toll''.
 - /Programming Clojure, Third Edition/ by Alex Miller with Stuart Halloway and Aaron Bedra
 - /Parallel and Concurrent Programming in Haskell/ by Simon Marlow
 - /Programming in GO/ by Mark Summerfield
