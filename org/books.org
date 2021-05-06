@@ -20,7 +20,7 @@ All lists, especially /Boring/, are incomplete.
 - /The GO Programming Language/ by Alan A. A. Donovan and Brian W. Kernighan
   - Probably the best book-form introduction to Go I know of.
     It introduces all the major concept of Go with great examples through out. 
-    I would wish though that modules would be covered in ''Chapter 10: Packages and the Go toll''.
+    I would wish though that modules would be covered in ''Chapter 10: Packages and the Go tool''.
 - /Programming Clojure, Third Edition/ by Alex Miller with Stuart Halloway and Aaron Bedra
 - /Parallel and Concurrent Programming in Haskell/ by Simon Marlow
 - /Programming in GO/ by Mark Summerfield
