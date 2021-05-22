@@ -16,7 +16,6 @@
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
 
-
 * Competing with Unicorns
 :PROPERTIES:
 :RSS_PERMALINK: html/competing_with_unicorns.html
@@ -28,7 +27,6 @@
 #+begin_src emacs-lisp :exports results :results raw
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
-
 
 * Idris' most important Feature
 :PROPERTIES:
@@ -45,6 +43,16 @@
 :PROPERTIES:
 :RSS_PERMALINK: html/wishlist.html
 :PUBDATE:  <2021-03-28 Sun 17:00>
+:END:
+** Published  :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
+* Towers of Complexity
+:PROPERTIES:
+:RSS_PERMALINK: html/RS0005.html
+:PUBDATE:  <2021-05-22 Sat 19:30>
 :END:
 ** Published  :ignore:published:
 /Published on {{{property(PUBDATE)}}}./

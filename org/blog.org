@@ -25,7 +25,6 @@ One pet-peeve of mine is version control.
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
 
-
 * Competing with Unicorns
 :PROPERTIES:
 :RSS_PERMALINK: html/competing_with_unicorns.html
@@ -65,7 +64,6 @@ So he rather not have these hoops and use dynamic types.
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
 
-
 * Wishlist for verified Programming
 :PROPERTIES:
 :RSS_PERMALINK: html/wishlist.html
@@ -83,10 +81,23 @@ Their primary purpose isn't using them in production, and ergonomics are often l
 I want verified programming to become more mainstream, but it can only become mainstream if it becomes more ergonomic. 
 That's why I started working on this list. 
 But first, let's start with what's already there.
-
+** Published                                               :ignore:published:
+/Published on {{{property(PUBDATE)}}}./
+#+begin_src emacs-lisp :exports results :results raw
+(concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
+#+end_src
+* Towers of Complexity
+:PROPERTIES:
+:RSS_PERMALINK: html/RS0005.html
+:PUBDATE:  <2021-05-22 Sat 19:30>
+:END:
+Every problem and every solution has an inherent complexity.
+Interestingly, the complexity of the problem and the solution don't have to be the same. 
+Instead, the complexity of the problem is a lower bound to the solution. 
+''Lower Bound" is /math-speak/ to say that the complexity of a solution can't be smaller than the problem's complexity it is solving. 
+Some probably think now: ''Duh, of course, problems have inherent complexity that must be dealt with in the solution.''
 ** Published  :ignore:published:
 /Published on {{{property(PUBDATE)}}}./
 #+begin_src emacs-lisp :exports results :results raw
 (concat "/[[../" (org-entry-get nil "RSS_PERMALINK" t) "][Read more...]]/" )
 #+end_src
-

@@ -1,0 +1,178 @@
+#+TITLE: Towers of Complexity
+#+DATE: 22 May 2021
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard@stewing.dev
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+# LICENSE: GPLv3
+
+Every problem and every solution has an inherent complexity.[fn:: Problem and Solution are used to describe problem classes and algorithms to solve them. 
+A problem class is a problem where the inputs are not determined yet. 
+For example: Find the greatest common divisor for =m= and =n=. 
+Find the greatest common divisor of =16= and =4= is an  instance of that problem.] 
+Interestingly, the complexity of the problem and the solution don't have to be the same. 
+Instead, the complexity of the problem is a lower bound to the solution. 
+''Lower Bound" is /math-speak/ to say that the complexity of a solution can't be smaller than the problem's complexity it is solving. 
+Some probably think now: ''Duh, of course, problems have inherent complexity that must be dealt with in the solution.''
+
+Now, think about it for a second. 
+How do we even measure the complexity of a problem? The intuition tells us that if we could find the =best= solution to a problem, that would A) be the upper bound for the problem. 
+(The Problem can't be more complex, that would break the lower bound relation from before.) 
+And B) we can't find a better solution; 
+otherwise, it wouldn't be the =best=. 
+So if there can't be a better solution, then it seems rational to classify the problem as complex as the best solution. 
+Hence, we use the complexity of the =best= solution as the complexity of the problem.
+
+This explanation uses two things that are really important to the definition:
+1. =best= 
+2. complexity of the solution. 
+=Best= implies that we can sort solutions. 
+When we talk about =best= in the context of complexity, we mean the least complex one. 
+So we need to define the complexity so that we can compare the complexity of two given solutions. 
+In =Mathematics=, the standard approach is to look at different models and compare their expressiveness. 
+So think something up that can only be modeled in Model-A and not in Model-B while Model-A can model everything Model-B can. 
+And then you conclude Model-A is more potent than Model-B. 
+(A model can be more potent than another, equally powerful, un-comparable (Model different things).)  
+
+Okay, great, does that help us? 
+Yes, we can now sort our models from least expressive to most expressive. 
+Pick the model that is the least expressive that still models the solution and use the class of equal models as a measurement for the complexity of the solution.
+
+Excellent, we now have a way to measure complexity for problems and their solutions. 
+Hurray. 
+But why should we care? Why did I spend 400 words motivating complexity theory? [fn:: Complexity theory looks at the complexity of problems and the relationship of these complexity classes. 
+The famous (unsolved) question P vs. NP is one of the questions they look at.]
+
+The simple answer, it is one of the parts of the job that software engineers only seem to care about in a few situations, and then it is only applied very unstructured. 
+Granted, I never worked as a software engineer, so this is just my view looking in, but it's not great. 
+So, to give complexity more structure, we need to model it, and I'm very uncreative. 
+Hence, I'm just going to use the model complexity theory operates in. 
+Plus, that allows me to use their example. 
+(I'm not going to formally define anything and not really use complexity theory for much. A) I'm not an expert. And B) it's not really necessary to make my point. 
+It is enough to know, there are different classes of problems running in various models of computation. 
+In most cases, we only care about them have increasing power. 
+(That's why I called this essay ''Towers of Complexity''.)
+
+There is still one question remaining. 
+Why should software engineers care about the complexity of problems and the solution they choose? Simply put, they are the ones that have to manage this complexity; 
+they have to implement them, and they have to make them work. 
+The number of times I have seen people choose solutions completely overpowered or underpowered for something is just not funny anymore. 
+
+For example, regular expressions can't count. 
+That means you can't have a regular expression that defines the language =L = {aⁿcbⁿ | ∀n∈N}=. 
+It is just outside of this computational model. 
+(The model in question is called ''Deterministic Finite Automaton''.) 
+That means if you, for example, have to validate input that has to have balanced parathesis, you can't use regular expressions. 
+It also means, if you try, you will fail. 
+Therefore, it is essential to judge problems and determine the least amount of expressiveness you need.
+
+The industry seems to have solved this problem (determining the required expressiveness) by simply always choosing the most powerful one. 
+Whatever problem the industry face, the industry just turns around and uses something Turing-complete. 
+Basically climbing (one of) the Towers of Complexity (name credits) to the top. 
+And with that, they lose all the excellent properties the models on the lower levels have. 
+These can drive optimizations that can become really useful in practice.
+
+My go-to example is SQL (backed by the Relational Algebra as a computational model.). 
+Yes, you can implement all the operations in other programming languages. 
+I have seen people do exactly that. 
+But A) your ad-hoc implementation of a join will not outperform the one from a database, and B) The SQL compiler/executor can do optimizations your implementation can't provide because it is missing the correct context. 
+If you additionally spent the time exporting and CSV from the database and then implementing the database operations you need. 
+Then you find me sitting there looking at you in confusion. 
+
+I'm not trying to put shame on people. 
+Many people writing software did not have a formal education in it. 
+And even if they have, it is straightforward not to care about it. 
+But I think we have to—we (as in the whole industry) pile on complexity at an extraordinary pace. 
+Often this complexity is warranted. 
+We tackle more complex problems and hence use more complex tools to solve them. 
+But that only holds in a macro view. 
+Most difficult problems are made up of more minor issues. 
+Minor issues often don't require the computational power of the system as a whole. 
+Hence, we can solve the problem by lesser means, increasing our ability to reason and optimize them. 
+(See the SQL example above.)
+
+I'm not asking people to thoroughly analyze every aspect of the problem. 
+I'm merely saying that we should emphasize how complex problems genuinely are and what is really needed to solve them. 
+If you are planning to analyze data, do I really need an actual programming language, or can I get away with a little bit of SQL? 
+(No, really, the number of times I was handed an excel sheet and some query like ''How is the money distributed between the categories?'', it's not even funny anymore.) 
+The same question applies when I'm trying to solve a problem with regular expression, ''Can I actually express the language (the set of accepted words) with regular expressions?''. 
+(I mainly apply my rule of thumb, ''Do I need to count?'' for this question.) 
+I feel we just need to communicate more, that there are different classes of problems and solve them with the tools made for the job. 
+(This is generally great advice. This whole little essay is just a rendition of it from a different perspective.)
+
+I imagine a common counter-argument for my argument might be something along the following lines: ''What if the requirements change and the problem becomes more complex?'' Firstly, the most often used computational models are actually inclusive. 
+I.e., the more complex model can also express the less complex one. 
+Additionally, the transformations are usually well understood. 
+Secondly, the problem doesn't go away when you just use a Turing machine, i.e., a full-fledged programming language. 
+You still will choose frameworks.[fn:: You can also view them as separate models, but they generally don't restrict the use of the language `ìn'' it. 
+If you use a regex lib in a programming language, you still can only put valid regular expressions in; 
+if you hand a handler function to a framework, that function can still do anything it wants. 
+I'm confident some frameworks work more like separate models; 
+that's just not what I think about when hearing the word.]  
+You still will make assumptions and introduce work for yourself if the requirements change. 
+Yes, the work will be different, but it still there. 
+So why not get yourself something in the meantime? 
+Like the ability to better reason about the problem you solved or know that the program you wrote will not get stuck? 
+And if you end up having to climb the tower a little further because requirements change, you have a backlog as to when it happened and, ideally, why it happened. 
+
+You can also apply the same reasoning to the efficiency of your solutions. 
+How can anyone really judge performance if you don't have any idea what the limits are? 
+I often find that helpful to know how I'm doing. 
+I do think, though, that my previous point is more important. 
+An inefficient algorithm limits the user's efficiency; 
+choosing a too powerful model may introduce more complexity than the team can handle, maybe even killing the project outright. 
+(Even though the reason 
+''The developers used models too powerful for the problem and they couldn't handle them.'' 
+probably never was documented like that.) 
+
+Interestingly (at least I find it interesting), thinking about the problem and choosing the computation model is very similar to the stronger Typing Disciplines in Programming Languages. 
+Type Systems can be viewed as restrictions on the language of the untyped lambda calculus; 
+from that perspective, the lambda calculus and the different Type Systems build a Tower of Complexity. 
+Sadly, this is not all that useful in current programming languages. 
+You would need to ascribe each term with the Type System to type-check it. 
+And you need a way to correctly[fn::A few properties should hold, not just choose any type from the other Type System.] 
+transform types between Type System. 
+Nothing really supported well. 
+(Maybe Racket? 
+That's the only environment I can think of that supports more than one Type System in the same program to some degree.)
+
+We can do a similar thing on a smaller scale. 
+Assigning Types to a function restricts the things it can do. 
+Viewed this way, it is nothing else than choosing a smaller computational model. 
+Hence, we can apply the same approach to writing functions. 
+What do I really need to compute the result? 
+What shapes can the output have? To be clear: 
+There are still several differences. 
+For example, different models are more often just more restrictive than types in programming languages in broader use. 
+(Yes, with an expressive enough Type System, we can express many things, but that's not what I'm talking about.) 
+The general idea still holds, though. 
+First, judge the problem at hand and choose the least powerful model, then solve the problem. 
+''The least powerful model'' translates to the strictest types. 
+For example, if you expect to only handle positive integers, use a Type that can only represent positive integers. 
+If the requirements change and you need to take all integers, you will need to change the code, but you can rely on the invariants provided by the types in the meantime. 
+
+I guess it depends on how you like to work. 
+I want to think about the problem and figure out what is really needed to solve it. 
+When programming, this means to describe the issue with types and then solve it. 
+Holes are great for this style of development. 
+(See [[../html/holes.html][here]].) 
+And I try to apply the same reasoning to the complexity of problems in general. 
+The restrictions this puts on me are kind of liberating in a sense. 
+With these restrictions in place, I don't need to worry about certain things. 
+For Types, I don't have to worry about broken invariants; 
+for the computational models, I know the scope of how I can mess up and, more importantly, how I can't. 
+
+Many people probably don't like to work like that. 
+They want to make it up as they go. 
+If this is your /modus operandi/, I won't change your mind. 
+But it does create issues. 
+If you make it up as you go, you can't make an informed decision about the computational model; 
+you have to choose the one that will cope with all your problems. 
+
+At some point, combining different models can, of course, introduce an overhead as well. 
+How high that cost is, depends on the context. 
+The rule to ''choose the least powerful computational model'' for a given problem just can't be used as an absolute. 
+Often you can get away with it because libraries exist that implement these restricted models. 
+But this is not always the case. 
+We just have to keep an eye on when it is worth putting effort into restricting ourselves and when it isn't.

@@ -14,8 +14,8 @@
   <link>https://stewing.dev</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Fri, 02 Apr 2021 22:35:48 +0200</pubDate>
-  <lastBuildDate>Fri, 02 Apr 2021 22:35:48 +0200</lastBuildDate>
+  <pubDate>Sat, 22 May 2021 19:29:08 +0200</pubDate>
+  <lastBuildDate>Sat, 22 May 2021 19:29:08 +0200</lastBuildDate>
   <generator>Emacs 27.2 Org-mode 9.3.7</generator>
   <webMaster>richard@stewing.dev (Richard Stewing)</webMaster>
   <image>
@@ -45,7 +45,6 @@
     </p>
     ]]></description>
   </item>
-
 
   <item>
     <title>Competing with Unicorns</title>
@@ -86,7 +85,6 @@
     ]]></description>
   </item>
 
-
   <item>
     <title>Wishlist for verified Programming</title>
     <link>https://stewing.dev/html/wishlist.html</link>
@@ -107,6 +105,23 @@
     I want verified programming to become more mainstream, but it can only become mainstream if it becomes more ergonomic. 
     That's why I started working on this list. 
     But first, let's start with what's already there.
+    </p>
+    ]]></description>
+  </item>
+
+  <item>
+    <title>Towers of Complexity</title>
+    <link>https://stewing.dev/html/RS0005.html</link>
+    <author>richard@stewing.dev (Richard Stewing)</author>
+    <guid isPermaLink="false">https://stewing.dev/html/RS0005.html</guid>
+    <pubDate>Sat, 22 May 2021 19:30:00 +0200</pubDate>
+
+    <description><![CDATA[<p>
+    Every problem and every solution has an inherent complexity.
+    Interestingly, the complexity of the problem and the solution don't have to be the same. 
+    Instead, the complexity of the problem is a lower bound to the solution. 
+    ''Lower Bound" is <i>math-speak</i> to say that the complexity of a solution can't be smaller than the problem's complexity it is solving. 
+    Some probably think now: ''Duh, of course, problems have inherent complexity that must be dealt with in the solution.''
     </p>
     ]]></description>
   </item>
