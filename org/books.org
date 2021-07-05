@@ -10,13 +10,21 @@
 
 All lists, especially /Boring/, are incomplete.
 
-- Currently reading: 
+- Currently reading: /Learning Perl: Making Easy Things Easy and Hard Things Possible/ by R. L. Schwartz, b d foy, and T. Phoenix
 
 
 * Computer Stuff
 - /The Pragmatic Programmer/ by David Thomas & Andrew Hunt
   - Also listended to the Audible audiobook. It is really fun!
 ** Programming Languages
+- /Racket Programming The Fun Way: From Strings to Turing Machines/ by James W. Stelly
+  - A fun little book. 
+    It strikes an interesting balance between simple programming tutorial and actual computer science concepts.
+    I can image it would feel right at home at in introductory computer science class at high school level. 
+    For someone with an already established background in computer science it is a fun little read now real ground is covered.
+    (That's already established by the title anyway.)
+    The most interesting thing was to see that is possible with Racket in ''as-is'' condition, really impressive.
+    Racket really is batteries included. 
 - /The GO Programming Language/ by Alan A. A. Donovan and Brian W. Kernighan
   - Probably the best book-form introduction to Go I know of.
     It introduces all the major concept of Go with great examples through out. 
